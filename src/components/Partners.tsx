@@ -14,7 +14,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0 }
 };
 
-const Partners = () => {
+const Partners: React.FC = () => {
   const partners = [
     { name: "Kenya Bureau of Statistics", image: partner1 },
     { name: "Uganda Bureau of Statistics", image: partner2 },
