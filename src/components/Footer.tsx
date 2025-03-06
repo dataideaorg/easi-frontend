@@ -6,9 +6,24 @@ import {
   EnvelopeIcon 
 } from '@heroicons/react/24/outline';
 import styles from '../utils/styles';
+import { useState } from 'react';
+import axios from 'axios';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/contact/newsletter/', { email });
+      console.log(response.data);
+      setEmail('');
+    } catch (error) {
+      console.error('Error submitting email:', error);
+    }
+  };
+  
 
   return (
     <footer className={`bg-[${styles.colors.dark}] text-white`}>
@@ -91,10 +106,12 @@ const Footer = () => {
             <p className={`${styles.typography.small} mb-4`}>
               Subscribe to our newsletter to receive updates about new programs and training opportunities.
             </p>
-            <form className="space-y-3">
+            <form onSubmit={handleSubmit} className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-2 bg-[#444444] border border-[#555555] rounded-md focus:outline-none focus:border-[#dd8604]"
               />
               <button

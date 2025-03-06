@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { 
   TextField, 
   Button, 
@@ -9,7 +10,8 @@ import {
   InputLabel, 
   Select, 
   Snackbar, 
-  Alert 
+  Alert,
+  CircularProgress 
 } from '@mui/material';
 import { 
   MapPinIcon, 
@@ -44,6 +46,8 @@ const Contact = () => {
     severity: 'success' as 'success' | 'error'
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -68,7 +72,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form
@@ -82,26 +86,49 @@ const Contact = () => {
     
     // If no errors, submit form
     if (!Object.values(newErrors).some(error => error)) {
-      // Here you would normally send the data to your backend
-      console.log('Form submitted:', formData);
+      setLoading(true);
       
-      // Show success message
-      setSnackbar({
-        open: true,
-        message: 'Your message has been sent successfully! We will get back to you soon.',
-        severity: 'success'
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        organization: '',
-        inquiryType: ''
-      });
+      try {
+        // Send data to Django backend
+        const response = await axios.post('http://localhost:8000/contact/', {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || '',
+          subject: formData.subject || 'Contact Form Submission',
+          message: formData.message,
+          organization: formData.organization || '',
+          inquiry_type: formData.inquiryType || 'general'
+        });
+        
+        // Show success message
+        setSnackbar({
+          open: true,
+          message: 'Your message has been sent successfully! We will get back to you soon.',
+          severity: 'success'
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          organization: '',
+          inquiryType: ''
+        });
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        
+        // Show error message
+        setSnackbar({
+          open: true,
+          message: 'There was an error sending your message. Please try again later.',
+          severity: 'error'
+        });
+      } finally {
+        setLoading(false);
+      }
     } else {
       // Show error message
       setSnackbar({
@@ -363,6 +390,7 @@ const Contact = () => {
                       variant="contained"
                       size="large"
                       fullWidth
+                      disabled={loading}
                       sx={{ 
                         py: 1.5,
                         '&:hover': {
@@ -372,7 +400,11 @@ const Contact = () => {
                         transition: 'all 0.3s'
                       }}
                     >
-                      Send Message
+                      {loading ? (
+                        <CircularProgress size={24} color="inherit" />
+                      ) : (
+                        'Send Message'
+                      )}
                     </Button>
                   </form>
                 </CardContent>

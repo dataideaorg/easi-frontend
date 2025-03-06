@@ -95,8 +95,9 @@ const Home = () => {
                   href="/training"
                   sx={{ 
                     backgroundColor: 'white', 
-                    color: '#dd8604',
-                    '&:hover': { backgroundColor: '#f8f8f8' },
+                    color: '#fff',
+                    border: '1px solid #fff', 
+                    '&:hover': { backgroundColor: '#f8f8f8', border: '1px solid #fff' },
                     px: 4,
                     py: 1.5
                   }}
@@ -109,7 +110,8 @@ const Home = () => {
                   href="/about"
                   sx={{ 
                     borderColor: 'white', 
-                    color: 'white',
+                    color: '#fff',
+                    border: '1px solid #fff',
                     '&:hover': { 
                       backgroundColor: 'rgba(255,255,255,0.1)', 
                       borderColor: 'white' 
