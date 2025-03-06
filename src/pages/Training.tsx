@@ -192,7 +192,7 @@ const Training: React.FC = () => {
                         title: "Introduction to AI",
                       date: "March 15-17, 2025",
                       location: "Kampala, Uganda",
-                      link: "https://meet.easi.ac.ug/",
+                      link: "https://www.meet.easi.ac.ug/",
                     },
                   ].map((event, index) => (
                     <motion.div 
