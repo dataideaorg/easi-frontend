@@ -209,7 +209,7 @@ const Training: React.FC = () => {
                         <div className="text-sm text-gray-600 flex flex-wrap gap-x-4">
                           <span>{event.date}</span>
                           <span>{event.location}</span>
-                          <a href={event.link} className="text-[${styles.colors.primary}]">Join event</a>
+                          <a href={event.link} target="_blank" rel="noopener noreferrer" className="text-[${styles.colors.primary}]">Join event</a>
                         </div>
                       </div>
                     </motion.div>
