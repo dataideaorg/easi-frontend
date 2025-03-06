@@ -261,6 +261,9 @@ const Home = () => {
                   },
                   transition: 'all 0.3s'
                 }}
+                onClick={() => {
+                  window.location.href = '/contact';
+                }}
               >
                 Contact Us Today
               </Button>

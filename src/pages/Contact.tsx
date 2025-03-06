@@ -134,16 +134,17 @@ const Contact = () => {
       title: "Phone Numbers",
       details: [
         "+256 700 123 456",
-        "+256 772 987 654"
+        "+256 772 987 654",
+        "+256 774 128 257"
       ]
     },
     {
       icon: <EnvelopeIcon className="h-6 w-6" />,
       title: "Email Addresses",
       details: [
-        "info@easi.org",
-        "training@easi.org",
-        "consultancy@easi.org"
+        "easiwebsite21@gmail.com",
+        "wesonga@wesonga.com",
+        "fullerbbosa@gmail.com"
       ]
     },
     {
