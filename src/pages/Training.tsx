@@ -191,7 +191,8 @@ const Training: React.FC = () => {
                     {
                         title: "Introduction to AI",
                       date: "March 15-17, 2025",
-                      location: "Kampala, Uganda"
+                      location: "Kampala, Uganda",
+                      link: "https://meet.easi.ac.ug/",
                     },
                   ].map((event, index) => (
                     <motion.div 
@@ -208,19 +209,20 @@ const Training: React.FC = () => {
                         <div className="text-sm text-gray-600 flex flex-wrap gap-x-4">
                           <span>{event.date}</span>
                           <span>{event.location}</span>
+                          <a href={event.link} className="text-[${styles.colors.primary}]">Join event</a>
                         </div>
                       </div>
                     </motion.div>
                   ))}
                 </div>
-                <div className="mt-4 text-center">
+                {/* <div className="mt-4 text-center">
                   <Button
                     variant="text"
                     className={`text-[${styles.colors.primary}]`}
                   >
                     View All Upcoming Trainings →
                   </Button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </div>

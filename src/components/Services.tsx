@@ -8,7 +8,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0 }
 };
 
-const Services = () => {
+const Services: React.FC = () => {
   const services = [
     {
       title: "Statistical Research",

@@ -14,6 +14,7 @@ const Navbar = () => {
     { name: 'About', href: '/about' },
     // { name: 'Programs', href: '/programs' },
     { name: 'Training', href: '/training' },
+    { name: 'Courses', href: 'https://courses.easi.ac.ug/' },
     { name: 'Consultancy', href: '/consultancy' },
     { name: 'Contact', href: '/contact' },
   ];
