@@ -90,7 +90,7 @@ const Contact = () => {
       
       try {
         // Send data to Django backend
-        const response = await axios.post('http://api.easi.ac.ug/contact/', {
+        const response = await axios.post('https://api.easi.ac.ug/contact/', {
           name: formData.name,
           email: formData.email,
           phone: formData.phone || '',
