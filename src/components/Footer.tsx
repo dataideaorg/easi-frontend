@@ -16,7 +16,7 @@ const Footer = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/contact/newsletter/', { email });
+      const response = await axios.post('http://api.easi.ac.ug/contact/newsletter/', { email });
       console.log(response.data);
       setEmail('');
     } catch (error) {

@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md text-[${styles.colors.dark}] hover:text-[${styles.colors.primary}] hover:bg-[#fff8ee]`}
+              className={`p-2 rounded-md text-[${styles.colors.primary}] hover:text-[${styles.colors.primary}] bg-[${styles.colors.light}]` }
             >
               {isOpen ? (
                 <XMarkIcon className="h-6 w-6" />
