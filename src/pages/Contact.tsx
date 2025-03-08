@@ -99,6 +99,8 @@ const Contact = () => {
           organization: formData.organization || '',
           inquiry_type: formData.inquiryType || 'general'
         });
+
+        console.log('Form submission response:', response.data);
         
         // Show success message
         setSnackbar({
