@@ -191,7 +191,7 @@ const Training: React.FC = () => {
                         title: "Test Event",
                       date: "March 09, 2025",
                       location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250308",
+                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250309",
                     },
                     {
                         title: "Introduction to AI",
