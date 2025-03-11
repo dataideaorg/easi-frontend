@@ -189,15 +189,15 @@ const Training: React.FC = () => {
                 <div className="space-y-4">
                   {[{
                         title: "Test Event",
-                      date: "March 09, 2025",
+                      date: "March 11, 2025",
                       location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250309",
+                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250311",
                     },
                     {
                         title: "Introduction to AI",
                       date: "March 15-17, 2025",
                       location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250308",
+                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250315",
                     },
                   ].map((event, index) => (
                     <motion.div 
