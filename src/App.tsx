@@ -15,7 +15,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <div className="flex flex-col min-h-screen">
+      <div className="w-full items-center">
+        <div className="flex flex-col min-h-screen ">
           <Navbar />
           <main className="flex-grow">
             <Routes>
@@ -29,6 +30,7 @@ function App() {
           </main>
           <Footer />
           <BackToTop />
+        </div>
         </div>
       </Router>
     </ThemeProvider>
