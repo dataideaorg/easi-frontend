@@ -8,6 +8,7 @@ import {
 import styles from '../utils/styles';
 import { useState } from 'react';
 import axios from 'axios';
+import { ENDPOINTS } from '../api/endpoints';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@ const Footer = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://api.easi.ac.ug/contact/newsletter/', { email });
+        const response = await axios.post(`${ENDPOINTS.API_URL}/contact/newsletter/`, { email });
       console.log(response.data);
       setEmail('');
     } catch (error) {

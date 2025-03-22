@@ -10,7 +10,7 @@ import Contact from './pages/Contact'
 import BackToTop from './components/BackToTop'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
-
+import Resource from './pages/Resource';
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -24,6 +24,7 @@ function App() {
               <Route path="/programs" element={<Programs />} />
               <Route path="/training" element={<Training />} />
               <Route path="/consultancy" element={<Consultancy />} />
+              <Route path="/resources" element={<Resource />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

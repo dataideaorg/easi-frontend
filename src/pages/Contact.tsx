@@ -22,6 +22,7 @@ import {
 import contactImage from '../assets/images/contact-hero.jpg';
 import styles from '../utils/styles';
 import { motion } from 'framer-motion';
+import { ENDPOINTS } from '../api/endpoints';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -90,7 +91,7 @@ const Contact = () => {
       
       try {
         // Send data to Django backend
-        const response = await axios.post('https://api.easi.ac.ug/contact/', {
+        const response = await axios.post(`${ENDPOINTS.API_URL}/contact/`, {
           name: formData.name,
           email: formData.email,
           phone: formData.phone || '',
