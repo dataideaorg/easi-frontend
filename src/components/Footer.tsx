@@ -5,6 +5,7 @@ import {
   PhoneIcon, 
   EnvelopeIcon 
 } from '@heroicons/react/24/outline';
+import { YouTube, Twitter } from '@mui/icons-material';
 import styles from '../utils/styles';
 import { useState } from 'react';
 import axios from 'axios';
@@ -45,6 +46,25 @@ const Footer = () => {
               in statistical methodology and high-quality training to enhance the quality 
               of national statistics.
             </p>
+            {/* Social Media Links */}
+            <div className="flex space-x-4">
+              <a 
+                href="https://twitter.com/easiacug" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`hover:text-[${styles.colors.primary}] transition-colors`}
+              >
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://youtube.com/@easiacug" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`hover:text-[${styles.colors.primary}] transition-colors`}
+              >
+                <YouTube className="h-6 w-6" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -92,10 +112,10 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <EnvelopeIcon className={`h-5 w-5 text-[${styles.colors.primary}]`} />
                 <a 
-                  href="mailto:info@easi.ac.ug"
+                  href="mailto:easi.ac.ug@gmail.com"
                   className={`hover:text-[${styles.colors.primary}] transition-colors`}
                 >
-                  info@easi.ac.ug
+                  easi.ac.ug@gmail.com
                 </a>
               </li>
             </ul>

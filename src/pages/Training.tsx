@@ -188,10 +188,10 @@ const Training: React.FC = () => {
                 <h3 className={`${styles.typography.h3} text-[${styles.colors.dark}] mb-4`}>Upcoming Training</h3>
                 <div className="space-y-4">
                   {[{
-                        title: "Test Event",
-                      date: "March 11, 2025",
-                      location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250311",
+                        title: "Closed Meeting",
+                      date: "July 04, 2025",
+                      location: "ONLINE",
+                      link: "https://meet.google.com/qhx-timi-jej",
                     },
                     {
                         title: "Introduction to AI",
