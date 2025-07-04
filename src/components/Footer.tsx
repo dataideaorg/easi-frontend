@@ -49,7 +49,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex space-x-4">
               <a 
-                href="https://twitter.com/easiacug" 
+                href="https://twitter.com/easi_ac_ug" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`hover:text-[${styles.colors.primary}] transition-colors`}
