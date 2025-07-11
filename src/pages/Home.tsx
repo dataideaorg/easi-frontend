@@ -107,7 +107,7 @@ const Home = () => {
                 <Button
                   variant="outlined"
                   size="large"
-                  href="/about"
+                  href="/training#/training"
                   sx={{ 
                     borderColor: 'white', 
                     color: '#fff',
@@ -184,7 +184,7 @@ const Home = () => {
                   <div className={`bg-[${styles.colors.primary}] p-4 text-center text-white`}>
                     <Button
                       variant="text"
-                      href="/about"
+                      href="/about#/about"
                       sx={{ color: 'white', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
                     >
                       Discover Our Story →

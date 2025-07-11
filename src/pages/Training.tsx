@@ -166,6 +166,9 @@ const Training: React.FC = () => {
                   variant="contained"
                   size="large"
                   className={`${styles.buttons.white} ${styles.buttons.medium}`}
+                  href="https://calendar.google.com/calendar/u/0?cid=ZWFzaS5hYy51Z0BnbWFpbC5jb20"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View Schedule
                 </Button>
@@ -173,6 +176,7 @@ const Training: React.FC = () => {
                   variant="outlined"
                   size="large"
                   className="border-white text-white hover:bg-white/20 hover:border-white"
+                  href="/#/contact"
                 >
                   Request Custom Training
                 </Button>
@@ -185,20 +189,14 @@ const Training: React.FC = () => {
               transition={{ duration: 1, delay: 0.3 }}
             >
               <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className={`${styles.typography.h3} text-[${styles.colors.dark}] mb-4`}>Upcoming Training</h3>
+                <h3 className={`${styles.typography.h3} text-[${styles.colors.dark}] mb-4`}>Upcoming Training / Meetings</h3>
                 <div className="space-y-4">
                   {[{
-                        title: "Closed Meeting",
-                      date: "July 04, 2025",
-                      location: "ONLINE",
-                      link: "https://meet.google.com/qhx-timi-jej",
-                    },
-                    {
-                        title: "Introduction to AI",
-                      date: "March 15-17, 2025",
+                      title: "EASI PLATFORM STRATEGY ADVANCEMENT",
+                      date: "July 11, 2025",
                       location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250315",
-                    },
+                      link: "https://meet.google.com/mca-jxda-amr",
+                    }, 
                   ].map((event, index) => (
                     <motion.div 
                       key={index}
@@ -403,6 +401,7 @@ const Training: React.FC = () => {
                 variant="contained"
                 size="large"
                 className={`${styles.buttons.primary} ${styles.buttons.large}`}
+                href="/#/contact"
               >
                 Request Training
               </Button>
@@ -410,6 +409,9 @@ const Training: React.FC = () => {
                 variant="outlined"
                 size="large"
                 className={`border-white text-white hover:bg-white/20 hover:border-white ${styles.buttons.large}`}
+                onClick={() => {
+                  alert("The brochure will be available soon");
+                }}
               >
                 Download Brochure
               </Button>
