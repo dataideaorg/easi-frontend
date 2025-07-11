@@ -193,12 +193,6 @@ const Training: React.FC = () => {
                       location: "Kampala, Uganda",
                       link: "https://meet.google.com/mca-jxda-amr",
                     }, 
-                    {
-                        title: "Introduction to AI",
-                      date: "March 15-17, 2025",
-                      location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250315",
-                    },
                   ].map((event, index) => (
                     <motion.div 
                       key={index}
