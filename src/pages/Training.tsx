@@ -198,16 +198,10 @@ const Training: React.FC = () => {
                       link: "https://meet.google.com/mca-jxda-amr",
                     },
                     {
-                      title: "Closed Meeting",
-                      date: "July 04, 2025, 11:00 AM",
-                      location: "ONLINE",
-                      link: "https://meet.google.com/qhx-timi-jej",
-                    },
-                    {
                       title: "Introduction to AI",
-                      date: "March 15-17, 2025",
-                      location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250315",
+                      date: "Unscheduled",
+                      location: "Online",
+                      link: "https://calendar.google.com/calendar/u/0?cid=ZWFzaS5hYy51Z0BnbWFpbC5jb20",
                     }
                   ].map((event, index) => (
                     <motion.div 
