@@ -166,6 +166,9 @@ const Training: React.FC = () => {
                   variant="contained"
                   size="large"
                   className={`${styles.buttons.white} ${styles.buttons.medium}`}
+                  href="https://calendar.google.com/calendar/u/0?cid=ZWFzaS5hYy51Z0BnbWFpbC5jb20"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   View Schedule
                 </Button>
@@ -173,6 +176,7 @@ const Training: React.FC = () => {
                   variant="outlined"
                   size="large"
                   className="border-white text-white hover:bg-white/20 hover:border-white"
+                  href="/#/contact"
                 >
                   Request Custom Training
                 </Button>
@@ -397,6 +401,7 @@ const Training: React.FC = () => {
                 variant="contained"
                 size="large"
                 className={`${styles.buttons.primary} ${styles.buttons.large}`}
+                href="/#/contact"
               >
                 Request Training
               </Button>
@@ -404,6 +409,9 @@ const Training: React.FC = () => {
                 variant="outlined"
                 size="large"
                 className={`border-white text-white hover:bg-white/20 hover:border-white ${styles.buttons.large}`}
+                onClick={() => {
+                  alert("The brochure will be available soon");
+                }}
               >
                 Download Brochure
               </Button>
