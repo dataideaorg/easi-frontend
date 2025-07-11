@@ -92,7 +92,7 @@ const Home = () => {
                 <Button
                   variant="contained"
                   size="large"
-                  href="/training"
+                  href="/#/training"
                   sx={{ 
                     backgroundColor: 'white', 
                     color: '#fff',
@@ -107,7 +107,7 @@ const Home = () => {
                 <Button
                   variant="outlined"
                   size="large"
-                  href="/training#/training"
+                  href="/#/training"
                   sx={{ 
                     borderColor: 'white', 
                     color: '#fff',
@@ -184,7 +184,7 @@ const Home = () => {
                   <div className={`bg-[${styles.colors.primary}] p-4 text-center text-white`}>
                     <Button
                       variant="text"
-                      href="/about#/about"
+                      href="/#/about"
                       sx={{ color: 'white', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
                     >
                       Discover Our Story →
@@ -264,7 +264,7 @@ const Home = () => {
                   transition: 'all 0.3s'
                 }}
                 onClick={() => {
-                  window.location.href = '/contact';
+                  window.location.href = '/#/contact';
                 }}
               >
                 Contact Us Today

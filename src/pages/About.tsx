@@ -291,6 +291,9 @@ const About = () => {
                 variant="contained"
                 size="large"
                 className={`${styles.buttons.primary} ${styles.buttons.large}`}
+                onClick={() => {
+                  window.location.href = '/#/contact';
+                }}
               >
                 Contact Us Today
               </Button>
