@@ -185,14 +185,14 @@ const Training: React.FC = () => {
               transition={{ duration: 1, delay: 0.3 }}
             >
               <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className={`${styles.typography.h3} text-[${styles.colors.dark}] mb-4`}>Upcoming Training</h3>
+                <h3 className={`${styles.typography.h3} text-[${styles.colors.dark}] mb-4`}>Upcoming Training / Meetings</h3>
                 <div className="space-y-4">
                   {[{
-                        title: "Test Event",
-                      date: "March 11, 2025",
+                      title: "EASI PLATFORM STRATEGY ADVANCEMENT",
+                      date: "July 11, 2025",
                       location: "Kampala, Uganda",
-                      link: "https://www.meet.easi.ac.ug/meeting?roomID=20250311",
-                    },
+                      link: "https://meet.google.com/mca-jxda-amr",
+                    }, 
                     {
                         title: "Introduction to AI",
                       date: "March 15-17, 2025",
