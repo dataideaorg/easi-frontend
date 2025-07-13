@@ -91,7 +91,7 @@ const Contact = () => {
       
       try {
         // Send data to Django backend
-        const response = await axios.post(`${ENDPOINTS.API_URL}/contact/`, {
+        const response = await axios.post(`${ENDPOINTS.CONTACT}`, {
           name: formData.name,
           email: formData.email,
           phone: formData.phone || '',

@@ -18,7 +18,7 @@ const Footer = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-        const response = await axios.post(`${ENDPOINTS.API_URL}/contact/newsletter/`, { email });
+        const response = await axios.post(`${ENDPOINTS.NEWSLETTER}`, { email });
       console.log(response.data);
       setEmail('');
     } catch (error) {
