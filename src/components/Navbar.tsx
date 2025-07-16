@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import styles from '../utils/styles';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,51 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md">
+      {/* Thin Top Banner */}
+      <section className="relative bg-gradient-to-r from-[#dd8604] to-[#ff9500] py-3">
+        <div className={styles.sections.container}>
+          <motion.div 
+            className="flex flex-col sm:flex-row items-center justify-between text-white"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-center space-x-3 mb-2 sm:mb-0">
+              <span className="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">
+                🚀 Upcoming Event
+              </span>
+              <span className="text-sm font-medium">Introduction to AI</span>
+            </div>
+            
+            <div className="flex items-center space-x-4 text-sm">
+              <span>📅 Friday, July 18, 2025</span>
+              <span>📍 Kampala, Uganda</span>
+              <Button
+                variant="contained"
+                size="small"
+                href="https://meet.google.com/ypg-wxdc-dwr"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ 
+                  backgroundColor: 'white',
+                  color: 'white',
+                  px: 3,
+                  py: 0.5,
+                  fontSize: '0.875rem',
+                  fontWeight: 'bold',
+                  '&:hover': {
+                    backgroundColor: '#f8f8f8',
+                    color: 'white'
+                  }
+                }}
+              >
+                Join Meeting
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <div className={styles.sections.container}>
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
