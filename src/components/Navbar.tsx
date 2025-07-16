@@ -67,6 +67,28 @@ const Navbar = () => {
               >
                 Join Meeting
               </Button>
+
+              <Button
+                variant="contained"
+                size="small"
+                href="https://forms.gle/yLcYFsvqyR9YmDuz6"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ 
+                  backgroundColor: 'white',
+                  color: 'white',
+                  px: 3,
+                  py: 0.5,
+                  fontSize: '0.875rem',
+                  fontWeight: 'bold',
+                  '&:hover': {
+                    backgroundColor: '#f8f8f8',
+                    color: 'white'
+                  }
+                }}
+              >
+                Book a Place
+              </Button>
             </div>
           </motion.div>
         </div>
