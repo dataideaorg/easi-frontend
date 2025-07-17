@@ -11,6 +11,7 @@ import BackToTop from './components/BackToTop'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import Resource from './pages/Resource';
+import UpcomingTrainings from './pages/UpcomingTrainings';
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -25,6 +26,7 @@ function App() {
               <Route path="/training" element={<Training />} />
               <Route path="/consultancy" element={<Consultancy />} />
               <Route path="/resources" element={<Resource />} />
+              <Route path="/upcoming-trainings" element={<UpcomingTrainings />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

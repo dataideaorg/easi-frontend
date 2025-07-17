@@ -218,14 +218,16 @@ const Training: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-                {/* <div className="mt-4 text-center">
+                <div className="mt-6 text-center">
                   <Button
-                    variant="text"
-                    className={`text-[${styles.colors.primary}]`}
+                    variant="contained"
+                    color="primary"
+                    href="/#/upcoming-trainings"
+                    className="bg-[#dd8604] text-white hover:bg-[#c77804]"
                   >
-                    View All Upcoming Trainings →
+                    View All Upcoming Trainings
                   </Button>
-                </div> */}
+                </div>
               </div>
             </motion.div>
           </div>
