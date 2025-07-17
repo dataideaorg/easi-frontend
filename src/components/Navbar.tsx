@@ -28,67 +28,92 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md">
       {/* Thin Top Banner */}
-      <section className="relative bg-gradient-to-r from-[#dd8604] to-[#ff9500] py-3">
+      <section className="relative bg-gradient-to-r from-[#dd8604] to-[#ff9500] py-2 md:py-3">
         <div className={styles.sections.container}>
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-between text-white"
+            className="flex flex-col md:flex-row items-center justify-between text-white"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center space-x-3 mb-2 sm:mb-0">
-              <span className="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">
+            {/* Left side - Event info */}
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-2 md:mb-0">
+              <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full">
                 🚀 Upcoming Event
               </span>
-              <span className="text-sm font-medium">Introduction to AI</span>
+              <span className="text-xs md:text-sm font-medium text-center sm:text-left">Introduction to AI</span>
             </div>
             
-            <div className="flex items-center space-x-4 text-sm">
-              <span>📅 Friday, July 18, 2025</span>
-              <span>📍 Kampala, Uganda</span>
-              <Button
-                variant="contained"
-                size="small"
-                href="https://meet.google.com/ypg-wxdc-dwr"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ 
-                  backgroundColor: 'white',
-                  color: 'white',
-                  px: 3,
-                  py: 0.5,
-                  fontSize: '0.875rem',
-                  fontWeight: 'bold',
-                  '&:hover': {
-                    backgroundColor: '#f8f8f8',
-                    color: 'white'
-                  }
-                }}
-              >
-                Join Meeting
-              </Button>
+            {/* Right side - Date, location, and buttons */}
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4 text-xs md:text-sm">
+              {/* Date and location - hide on very small screens */}
+              <div className="hidden sm:flex items-center space-x-3">
+                <span>📅 Friday, July 18, 2025</span>
+                <span>📍 Kampala, Uganda</span>
+              </div>
+              
+              {/* Mobile: show only date */}
+              <div className="sm:hidden">
+                <span>📅 July 18, 2025</span>
+              </div>
+              
+              {/* Buttons */}
+              <div className="flex items-center space-x-2">
+                <Button
+                  variant="contained"
+                  size="small"
+                  href="https://meet.google.com/ypg-wxdc-dwr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ 
+                    backgroundColor: 'white',
+                    color: 'white',
+                    px: 2,
+                    py: 0.5,
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold',
+                    minWidth: 'auto',
+                    '&:hover': {
+                      backgroundColor: '#f8f8f8',
+                      color: 'white'
+                    },
+                    '@media (min-width: 768px)': {
+                      px: 3,
+                      fontSize: '0.875rem'
+                    }
+                  }}
+                >
+                  Join Meeting
+                </Button>
 
-              <Button
-                variant="contained"
-                size="small"
-                href="https://forms.gle/yLcYFsvqyR9YmDuz6"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ 
-                  backgroundColor: 'white',
-                  color: 'white',
-                  px: 3,
-                  py: 0.5,
-                  fontSize: '0.875rem',
-                  fontWeight: 'bold',
-                  '&:hover': {
-                    backgroundColor: '#f8f8f8',
-                    color: 'white'
-                  }
-                }}
-              >
-                Book a Place
-              </Button>
+                <Button
+                  variant="contained"
+                  size="small"
+                  href="https://forms.gle/yLcYFsvqyR9YmDuz6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ 
+                    backgroundColor: 'white',
+                    color: 'white',
+                    mx: 1,
+                    px: 2,
+                    py: 0.5,
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold',
+                    minWidth: 'auto',
+                    '&:hover': {
+                      backgroundColor: '#f8f8f8',
+                      color: 'white'
+                    },
+                    '@media (min-width: 768px)': {
+                      px: 3,
+                      fontSize: '0.875rem'
+                    }
+                  }}
+                >
+                  Book a Place
+                </Button>
+              </div>
             </div>
           </motion.div>
         </div>
