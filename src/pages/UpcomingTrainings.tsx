@@ -12,10 +12,10 @@ const upcomingTrainings = [
     description: 'A hands-on introduction to Artificial Intelligence for professionals and students interested in the field.'
   },
   {
-    title: 'Data Visualization with R',
+    title: 'Data Management with R Language',
     date: 'To Be Determined',
     location: 'Online ',
-    description: 'Master the art of data visualization using R and ggplot2. Ideal for analysts and researchers.'
+    description: 'Master the art of data management using R Language. Ideal for analysts and researchers.'
   },
   {
     title: 'Python for Data Science Bootcamp',
@@ -133,6 +133,12 @@ const UpcomingTrainings: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <span className="font-semibold text-lg text-[#dd8604] mr-2">Mobile Number:</span>
                   <span className="font-mono text-lg text-gray-900">+256 749747472</span>
+                  <span className="font-semibold text-lg text-[#dd8604] mx-2">Name:</span>
+                  <span className="font-mono text-lg text-gray-900">Ronald Wesonga</span>
+                </div>
+                <div className="flex items-center mb-4">
+                  <span className="font-semibold text-lg text-[#dd8604] mr-2">Mobile Number:</span>
+                  <span className="font-mono text-lg text-gray-900">+256 791429565</span>
                   <span className="font-semibold text-lg text-[#dd8604] mx-2">Name:</span>
                   <span className="font-mono text-lg text-gray-900">Ronald Wesonga</span>
                 </div>

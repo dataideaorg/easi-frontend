@@ -197,6 +197,12 @@ const Training: React.FC = () => {
                       location: "Kampala, Uganda",
                       link: "https://meet.google.com/ypg-wxdc-dwr",
                     }, 
+                    {
+                      title: "Data Management with R Language",
+                      date: "To be announced",
+                      location: "Kampala, Uganda",
+                      link: "https://meet.google.com/ypg-wxdc-dwr",
+                    }
                   ].map((event, index) => (
                     <motion.div 
                       key={index}
