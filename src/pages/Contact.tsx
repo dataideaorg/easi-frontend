@@ -425,7 +425,7 @@ const Contact = () => {
                 <CardContent className="p-0 h-full">
                   <div className="h-full min-h-[400px] w-full">
                     <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7573969501847!2d32.57729491475397!3d0.3152119997709283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb8080541c63%3A0x518b37f5b348207!2sKampala%20Rd%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1625764215662!5m2!1sen!2sus" 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7512501188808!2d32.59823291070469!3d0.33222059966312184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbbe17c0c8ef%3A0x569e2dd06779b13e!2s15a%20Baskerville%20Ave%2C%20Kampala!5e0!3m2!1sen!2sug!4v1753125417714!5m2!1sen!2sug"
                       width="100%" 
                       height="100%" 
                       style={{ border: 0 }} 

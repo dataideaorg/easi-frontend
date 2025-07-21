@@ -41,20 +41,20 @@ const Navbar = () => {
               <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full">
                 🚀 Upcoming Event
               </span>
-              <span className="text-xs md:text-sm font-medium text-center sm:text-left">Introduction to AI</span>
+              <span className="text-xs md:text-sm font-medium text-center sm:text-left">Data Management using R Language</span>
             </div>
             
             {/* Right side - Date, location, and buttons */}
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4 text-xs md:text-sm">
               {/* Date and location - hide on very small screens */}
               <div className="hidden sm:flex items-center space-x-3">
-                <span>📅 Friday, July 18, 2025</span>
+                <span>📅 To be announced</span>
                 <span>📍 Kampala, Uganda</span>
               </div>
               
               {/* Mobile: show only date */}
               <div className="sm:hidden">
-                <span>📅 July 18, 2025</span>
+                <span>📅 To be announced</span>
               </div>
               
               {/* Buttons */}
