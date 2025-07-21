@@ -103,10 +103,10 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <PhoneIcon className={`h-5 w-5 text-[${styles.colors.primary}]`} />
                 <a 
-                  href="tel:+256774839058"
+                  href="tel:+256774128257"
                   className={`hover:text-[${styles.colors.primary}] transition-colors`}
                 >
-                  +256 774 839 058
+                  +256 774 128 257
                 </a>
               </li>
               <li className="flex items-center space-x-3">
