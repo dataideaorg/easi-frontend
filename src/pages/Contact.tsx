@@ -154,8 +154,8 @@ const Contact = () => {
       icon: <MapPinIcon className="h-6 w-6" />,
       title: "Our Location",
       details: [
-        "East African Statistics Institute",
-        "Plot 123, Kampala Road",
+        "Plot 15 Baskerville Avenue, Kololo",
+        "P.O. Box 11140",
         "Kampala, Uganda"
       ]
     },
