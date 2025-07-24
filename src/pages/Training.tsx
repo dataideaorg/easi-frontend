@@ -199,7 +199,7 @@ const Training: React.FC = () => {
                     }, 
                     {
                       title: "Data Management with R Language",
-                      date: "To be announced",
+                      date: "Tuesday, July 29, to Wednesday, July 30, 2025",
                       location: "Kampala, Uganda",
                       link: "https://meet.google.com/ypg-wxdc-dwr",
                     }
@@ -224,18 +224,107 @@ const Training: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-                <div className="mt-6 text-center">
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    href="/#/upcoming-trainings"
-                    className="bg-[#dd8604] text-white hover:bg-[#c77804]"
-                  >
-                    View All Upcoming Trainings
-                  </Button>
-                </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Trainings Grid (moved from UpcomingTrainings) */}
+      <section className={`${styles.sections.padding} ${styles.sections.gray}`}>
+        <div className={styles.sections.container}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className={`${styles.typography.h2} mb-4`}>All Upcoming Training Events</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Explore our upcoming events and secure your spot today.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Data Management with R Language',
+                date: 'Tuesday, July 29, to Wednesday, July 30, 2025',
+                location: 'Online ',
+                description: 'Master the art of data management using R Language. Ideal for analysts and researchers.'
+              },
+              {
+                title: 'Python for Data Science Bootcamp',
+                date: 'To Be Determined',
+                location: 'Online',
+                description: 'An intensive bootcamp covering Python basics, pandas, and machine learning for aspiring data scientists.'
+              },
+              {
+                title: 'Machine Learning with Python',
+                date: 'To Be Determined',
+                location: 'Online',
+                description: 'An intensive training covering machine learning algorithms and their applications, with a focus on practical implementation.'
+              },
+            ].map((training, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className={styles.cards.base}>
+                  <CardContent className={styles.cards.content}>
+                    <h3 className="text-xl font-semibold mb-2 text-[#dd8604]">{training.title}</h3>
+                    <div className="text-gray-700 mb-1"><strong className="text-gray-900">Date:</strong> {training.date}</div>
+                    <div className="text-gray-700 mb-1"><strong className="text-gray-900">Location:</strong> {training.location}</div>
+                    <p className="text-gray-600 mt-2 mb-4">{training.description}</p>
+                    <Button
+                      variant="contained"
+                      className={`${styles.buttons.primary} ${styles.buttons.medium}`}
+                      href="/#/contact"
+                    >
+                      Express Interest
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+              
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How to Register (moved from UpcomingTrainings) */}
+      <section className={styles.sections.padding}>
+        <div className={styles.sections.container}>
+          <div className="mx-auto">
+            <Card className="bg-yellow-50 border-l-4 border-[#dd8604] shadow-md mb-12">
+              <CardContent>
+                <h2 className="text-2xl font-bold mb-4 text-[#dd8604]">How to Pay</h2>
+                <p className="mb-2 text-gray-700">
+                  To secure your spot in our training, please deposit the required fee via Mobile Money to:
+                </p>
+                <div className="flex items-center mb-4">
+                  <span className="font-semibold text-lg text-[#dd8604] mr-2">Mobile Number:</span>
+                  <span className="font-mono text-lg text-gray-900">+256 749747472</span>
+                  <span className="font-semibold text-lg text-[#dd8604] mx-2">Name:</span>
+                  <span className="font-mono text-lg text-gray-900">Ronald Wesonga</span>
+                </div>
+                <div className="flex items-center mb-4">
+                  <span className="font-semibold text-lg text-[#dd8604] mr-2">Mobile Number:</span>
+                  <span className="font-mono text-lg text-gray-900">+256 791429565</span>
+                  <span className="font-semibold text-lg text-[#dd8604] mx-2">Name:</span>
+                  <span className="font-mono text-lg text-gray-900">Ronald Wesonga</span>
+                </div>
+                <p className="mb-2 text-gray-700">
+                  After payment, capture the transaction ID fill it in this form <a href='https://forms.gle/7yHWruQ7RFBXANTc9' className="text-[#dd8604] underline">EASI Training Registration Form</a>.
+                </p>
+                <p className="text-gray-600 text-sm">
+                  For any questions, <a href="/#/contact" className="text-[#dd8604] underline">contact us here</a>.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -250,7 +339,7 @@ const Training: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className={`${styles.typography.h2} mb-4`}>Our Training Programs</h2>
+            <h2 className={`${styles.typography.h2} mb-4`}>Other Training Programs</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Comprehensive training solutions designed to enhance statistical capacity and data analysis skills
             </p>

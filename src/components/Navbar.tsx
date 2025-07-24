@@ -48,13 +48,13 @@ const Navbar = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4 text-xs md:text-sm">
               {/* Date and location - hide on very small screens */}
               <div className="hidden sm:flex items-center space-x-3">
-                <span>📅 To be announced</span>
+                <span>📅 Tuesday, July 29, to Wednesday, July 30, 2025</span>
                 <span>📍 Kampala, Uganda</span>
               </div>
               
               {/* Mobile: show only date */}
               <div className="sm:hidden">
-                <span>📅 To be announced</span>
+                <span>📅 Tuesday, July 29, to Wednesday, July 30, 2025</span>
               </div>
               
               {/* Buttons */}
