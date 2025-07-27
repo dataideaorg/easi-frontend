@@ -13,9 +13,8 @@ const Navbar = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    // { name: 'Programs', href: '/programs' },
+    { name: 'Courses', href: '/courses' },
     { name: 'Training', href: '/training' },
-    { name: 'Courses', href: 'https://courses.easi.ac.ug/' },
     { name: 'Consultancy', href: '/consultancy' },
     { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' },
@@ -41,20 +40,20 @@ const Navbar = () => {
               <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full">
                 🚀 Upcoming Event
               </span>
-              <span className="text-xs md:text-sm font-medium text-center sm:text-left">Data Management using R Language</span>
+              <span className="text-xs md:text-sm font-medium text-center sm:text-left">Introduction to AI</span>
             </div>
             
             {/* Right side - Date, location, and buttons */}
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4 text-xs md:text-sm">
               {/* Date and location - hide on very small screens */}
               <div className="hidden sm:flex items-center space-x-3">
-                <span>📅 Tuesday, July 29, to Wednesday, July 30, 2025</span>
+                <span>📅 Friday, July 18, 2025</span>
                 <span>📍 Kampala, Uganda</span>
               </div>
               
               {/* Mobile: show only date */}
               <div className="sm:hidden">
-                <span>📅 Tuesday, July 29, to Wednesday, July 30, 2025</span>
+                <span>📅 Friday, July 18, 2025</span>
               </div>
               
               {/* Buttons */}
@@ -62,9 +61,7 @@ const Navbar = () => {
                 <Button
                   variant="contained"
                   size="small"
-                  href="https://meet.google.com/ypg-wxdc-dwr"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#/contact"
                   sx={{ 
                     backgroundColor: 'white',
                     color: 'white',
@@ -83,35 +80,7 @@ const Navbar = () => {
                     }
                   }}
                 >
-                  Join Meeting
-                </Button>
-
-                <Button
-                  variant="contained"
-                  size="small"
-                  href="https://forms.gle/yLcYFsvqyR9YmDuz6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ 
-                    backgroundColor: 'white',
-                    color: 'white',
-                    mx: 1,
-                    px: 2,
-                    py: 0.5,
-                    fontSize: '0.75rem',
-                    fontWeight: 'bold',
-                    minWidth: 'auto',
-                    '&:hover': {
-                      backgroundColor: '#f8f8f8',
-                      color: 'white'
-                    },
-                    '@media (min-width: 768px)': {
-                      px: 3,
-                      fontSize: '0.875rem'
-                    }
-                  }}
-                >
-                  Book a Place
+                  Express Interest
                 </Button>
               </div>
             </div>

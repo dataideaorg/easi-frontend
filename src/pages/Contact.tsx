@@ -191,7 +191,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden py-20" id="contact">
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 z-0">
           <img 

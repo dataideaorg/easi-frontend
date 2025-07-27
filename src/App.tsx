@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import Programs from './pages/Programs'
+import Courses from './pages/Courses'
 import Training from './pages/Training'
 import Consultancy from './pages/Consultancy'
 import Contact from './pages/Contact'
@@ -22,7 +22,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/programs" element={<Programs />} />
+              <Route path="/courses" element={<Courses />} />
               <Route path="/training" element={<Training />} />
               <Route path="/consultancy" element={<Consultancy />} />
               <Route path="/resources" element={<Resource />} />
