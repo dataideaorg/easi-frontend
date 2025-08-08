@@ -86,6 +86,11 @@ const Footer = () => {
                   Consultancy
                 </Link>
               </li>
+              <li>
+                <Link to="https://docs.google.com/document/d/1WkFE5E8_SuWIUWfcg4MlzLitl9-r9OOM/edit?usp=sharing&ouid=113225601347272420208&rtpof=true&sd=true" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
 
