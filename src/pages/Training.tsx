@@ -281,7 +281,9 @@ const Training: React.FC = () => {
                     <Button
                       variant="contained"
                       className={`${styles.buttons.primary} ${styles.buttons.medium}`}
-                      href="/#/contact"
+                      onClick={() => {
+                        document.getElementById('how-to-register')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
                     >
                       Express Interest
                     </Button>
