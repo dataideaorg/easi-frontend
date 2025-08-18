@@ -213,7 +213,11 @@ const Training: React.FC = () => {
                         <div className="text-sm text-gray-600 flex flex-wrap gap-x-4">
                           <span>{event.date}</span>
                           <span>{event.location}</span>
-                          <a href={event.link} target="_blank" rel="noopener noreferrer" className="text-[${styles.colors.primary}]">Join event</a>
+                          {/* <a href={event.link} target="_blank" rel="noopener noreferrer" className="text-[${styles.colors.primary}]">Join event</a> */}
+                          <a href="#how-to-register" className="text-[${styles.colors.primary}] hover:underline cursor-pointer" onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('how-to-register')?.scrollIntoView({ behavior: 'smooth' });
+                          }}>Pay and Register</a>
                         </div>
                       </div>
                     </motion.div>
@@ -291,12 +295,12 @@ const Training: React.FC = () => {
       </section>
 
       {/* How to Register (moved from UpcomingTrainings) */}
-      <section className={styles.sections.padding}>
+      <section className={styles.sections.padding} id="how-to-register">
         <div className={styles.sections.container}>
           <div className="mx-auto">
             <Card className="bg-yellow-50 border-l-4 border-[#dd8604] shadow-md mb-12">
               <CardContent>
-                <h2 className="text-2xl font-bold mb-4 text-[#dd8604]">How to Pay</h2>
+                <h2 className="text-2xl font-bold mb-4 text-[#dd8604]">How to Pay and Register</h2>
                 <p className="mb-2 text-gray-700">
                   To secure your spot in our training, please deposit the required fee via Mobile Money to:
                 </p>
@@ -313,7 +317,7 @@ const Training: React.FC = () => {
                   <span className="font-mono text-lg text-gray-900">Ronald Wesonga</span>
                 </div>
                 <p className="mb-2 text-gray-700">
-                  After payment, capture the transaction ID fill it in this form <a href='https://forms.gle/7yHWruQ7RFBXANTc9' className="text-[#dd8604] underline">EASI Training Registration Form</a>.
+                  After payment, capture the transaction ID fill it in this form <a href='https://forms.gle/mVaG8Az9LDwNesZV8' className="text-[#dd8604] underline">EASI Training Registration Form</a>.
                 </p>
                 <p className="text-gray-600 text-sm">
                   For any questions, <a href="/#/contact" className="text-[#dd8604] underline">contact us here</a>.

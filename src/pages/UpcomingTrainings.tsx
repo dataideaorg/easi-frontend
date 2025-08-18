@@ -128,7 +128,7 @@ const UpcomingTrainings: React.FC = () => {
               <CardContent>
                 <h2 className="text-2xl font-bold mb-4 text-[#dd8604]">How to Pay</h2>
                 <p className="mb-2 text-gray-700">
-                  To secure your spot in our training, please deposit the required fee via Mobile Money to:
+                  To secure your spot in our upcoming training, please deposit the required fee via Mobile Money to:
                 </p>
                 <div className="flex items-center mb-4">
                   <span className="font-semibold text-lg text-[#dd8604] mr-2">Mobile Number:</span>
@@ -143,7 +143,7 @@ const UpcomingTrainings: React.FC = () => {
                   <span className="font-mono text-lg text-gray-900">Ronald Wesonga</span>
                 </div>
                 <p className="mb-2 text-gray-700">
-                  After payment, capture the transaction ID fill it in this form <a href='https://forms.gle/7yHWruQ7RFBXANTc9' className="text-[#dd8604] underline">EASI Training Registration Form</a>.
+                  After payment, capture the transaction ID fill it in this form <a href='https://forms.gle/mVaG8Az9LDwNesZV8' className="text-[#dd8604] underline">EASI Training Registration Form</a>.
                 </p>
                 <p className="text-gray-600 text-sm">
                   For any questions, <a href="/#/contact" className="text-[#dd8604] underline">contact us here</a>.
