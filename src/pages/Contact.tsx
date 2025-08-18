@@ -172,7 +172,7 @@ const Contact = () => {
       icon: <EnvelopeIcon className="h-6 w-6" />,
       title: "Email Addresses",
       details: [
-        "easi.ac.ug@gmail.com",
+        "info@easi.ac.ug",
         "wesonga@wesonga.com",
         "fullerbbosa@gmail.com"
       ]
@@ -461,7 +461,7 @@ const Contact = () => {
             {[
               {
                 question: "How can I register for a training program?",
-                answer: "You can register for our training programs by filling out the contact form on this page, specifying the program you're interested in, or by emailing us directly at easi.ac.ug@gmail.com."
+                answer: "You can register for our training programs by filling out the contact form on this page, specifying the program you're interested in, or by emailing us directly at info@easi.ac.ug."
               },
               {
                 question: "Do you offer customized training for organizations?",
@@ -473,7 +473,7 @@ const Contact = () => {
               },
               {
                 question: "How can I partner with EASI?",
-                answer: "We welcome partnerships with organizations that share our commitment to advancing statistical excellence in East Africa. Please contact us at easi.ac.ug@gmail.com to discuss potential collaboration opportunities."
+                answer: "We welcome partnerships with organizations that share our commitment to advancing statistical excellence in East Africa. Please contact us at info@easi.ac.ug to discuss potential collaboration opportunities."
               }
             ].map((faq, index) => (
               <motion.div

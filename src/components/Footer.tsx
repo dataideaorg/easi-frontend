@@ -120,10 +120,10 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <EnvelopeIcon className={`h-5 w-5 text-[${styles.colors.primary}]`} />
                 <a 
-                  href="mailto:easi.ac.ug@gmail.com"
+                  href="mailto:info@easi.ac.ug"
                   className={`hover:text-[${styles.colors.primary}] transition-colors`}
                 >
-                  easi.ac.ug@gmail.com
+                  info@easi.ac.ug
                 </a>
               </li>
             </ul>
