@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/images/EASI-Logo.png';
 import { 
   MapPinIcon, 
@@ -25,7 +25,10 @@ const Footer = () => {
       console.error('Error submitting email:', error);
     }
   };
-  
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <footer className={`bg-[${styles.colors.dark}] text-white`}>
@@ -72,22 +75,22 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
+                <Link to="/about" className={`hover:text-[${styles.colors.primary}] transition-colors`} onClick={handleLinkClick}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/training" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
+                <Link to="/training" className={`hover:text-[${styles.colors.primary}] transition-colors`} onClick={handleLinkClick}>
                   Training
                 </Link>
               </li>
               <li>
-                <Link to="/consultancy" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
+                <Link to="/consultancy" className={`hover:text-[${styles.colors.primary}] transition-colors`} onClick={handleLinkClick}>
                   Consultancy
                 </Link>
               </li>
               <li>
-                <Link to="https://docs.google.com/document/d/1WkFE5E8_SuWIUWfcg4MlzLitl9-r9OOM/edit?usp=sharing&ouid=113225601347272420208&rtpof=true&sd=true" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
+                <Link to="/terms-and-conditions" className={`hover:text-[${styles.colors.primary}] transition-colors`} onClick={handleLinkClick}>
                   Terms of Service
                 </Link>
               </li>
@@ -159,12 +162,9 @@ const Footer = () => {
               © {currentYear} East African Statistics Institute. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="/privacy" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
-                Privacy Policy
-              </a>
-              <a href="/terms" className={`hover:text-[${styles.colors.primary}] transition-colors`}>
+              <Link to="/terms-and-conditions" className={`hover:text-[${styles.colors.primary}] transition-colors`} onClick={handleLinkClick}>
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
