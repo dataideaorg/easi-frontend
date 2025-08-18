@@ -12,10 +12,10 @@ const upcomingTrainings = [
     description: 'A hands-on introduction to Artificial Intelligence for professionals and students interested in the field.'
   },
   {
-    title: 'Data Management with R Language',
-    date: 'To Be Determined',
+    title: 'Data Management with Python',
+    date: 'Tuesday, August 29, to Wednesday, August 30, 2025',
     location: 'Online ',
-    description: 'Master the art of data management using R Language. Ideal for analysts and researchers.'
+    description: 'Master the art of data management using Python. Ideal for analysts and researchers.'
   },
   {
     title: 'Python for Data Science Bootcamp',

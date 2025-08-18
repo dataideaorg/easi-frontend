@@ -193,9 +193,9 @@ const Training: React.FC = () => {
                 <div className="space-y-4">
                   {[
                     {
-                      title: "Data Management with R Language",
-                      date: "Tuesday, July 29, to Wednesday, July 30, 2025",
-                      location: "Kampala, Uganda",
+                      title: "Data Management with Python",
+                      date: "Tuesday, August 29, to Wednesday, August 30, 2025",
+                      location: "Online",
                       link: "https://meet.google.com/ypg-wxdc-dwr",
                     }
                   ].map((event, index) => (
@@ -243,10 +243,10 @@ const Training: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Data Management with R Language',
-                date: 'Tuesday, July 29, to Wednesday, July 30, 2025',
+                title: 'Data Management with Python',
+                date: 'Tuesday, August 29, to Wednesday, August 30, 2025',
                 location: 'Online ',
-                description: 'Master the art of data management using R Language. Ideal for analysts and researchers.'
+                description: 'Master the art of data management using Python. Ideal for analysts and researchers.'
               },
               {
                 title: 'Python for Data Science Bootcamp',
