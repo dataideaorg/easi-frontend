@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@mui/material';
+import { Card, CardContent, Link } from '@mui/material';
 import { ChartBarIcon, AcademicCapIcon, BeakerIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import styles from '../utils/styles';
 import { motion } from 'framer-motion';
@@ -14,25 +14,25 @@ const Services: React.FC = () => {
       title: "Statistical Research",
       description: "Research in appropriate statistical and computational methodology to facilitate quality national statistics",
       icon: <ChartBarIcon className={`h-12 w-12 text-[${styles.colors.primary}]`} />,
-      link: "/about"
+      link: "/#/about"
     },
     {
       title: "Training Programs",
       description: "Practical, high-quality training programs delivered by experienced professionals in statistics and data analysis",
       icon: <AcademicCapIcon className={`h-12 w-12 text-[${styles.colors.primary}]`} />,
-      link: "/training"
+      link: "/#/training"
     },
     {
       title: "Consultancy & Research",
       description: "Premier management development and excellence in statistical methodologies, systems and software applications",
       icon: <BeakerIcon className={`h-12 w-12 text-[${styles.colors.primary}]`} />,
-      link: "/consultancy"
+      link: "/#/consultancy"
     },
     {
       title: "Tailored Training",
       description: "Customized training solutions delivered at your premises, focusing on your organization's specific requirements",
       icon: <UserGroupIcon className={`h-12 w-12 text-[${styles.colors.primary}]`} />,
-      link: "/training"
+      link: "/#/training"
     }
   ];
 
@@ -73,16 +73,15 @@ const Services: React.FC = () => {
                   </div>
                   <h3 className={`${styles.typography.h4} mb-3 text-center`}>{service.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-                  <div className="text-center">
-                    <motion.a 
-                      href={service.link}
+                  <Link href={service.link} className="text-center">
+                    <motion.div 
                       className={`text-[${styles.colors.primary}] hover:text-[${styles.colors.primaryHover}] font-medium inline-block`}
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     >
                       Learn More →
-                    </motion.a>
-                  </div>
+                    </motion.div>
+                  </Link>
                 </CardContent>
               </Card>
             </motion.div>
