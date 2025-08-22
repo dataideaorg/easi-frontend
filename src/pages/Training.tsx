@@ -194,7 +194,7 @@ const Training: React.FC = () => {
                   {[
                     {
                       title: "Data Management with Python",
-                      date: "Tuesday, August 29, to Wednesday, August 30, 2025",
+                      date: "Friday, August 29, to Wednesday, August 30, 2025, 9AM - 12PM",
                       location: "Online",
                       link: "https://meet.google.com/ypg-wxdc-dwr",
                     }
@@ -248,7 +248,7 @@ const Training: React.FC = () => {
             {[
               {
                 title: 'Data Management with Python',
-                date: 'Tuesday, August 29, to Wednesday, August 30, 2025',
+                date: 'Friday, August 29, to Wednesday, August 30, 2025, 9AM - 12PM',
                 location: 'Online ',
                 description: 'Master the art of data management using Python. Ideal for analysts and researchers.'
               },

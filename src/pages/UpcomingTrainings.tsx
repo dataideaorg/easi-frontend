@@ -13,7 +13,7 @@ const upcomingTrainings = [
   },
   {
     title: 'Data Management with Python',
-    date: 'Tuesday, August 29, to Wednesday, August 30, 2025',
+    date: 'Friday, August 29, to Wednesday, August 30, 2025',
     location: 'Online ',
     description: 'Master the art of data management using Python. Ideal for analysts and researchers.'
   },
