@@ -33,7 +33,7 @@ export default function Home() {
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 z-0">
         <Image
-            src="/images/data-management-with-python.jpg"
+            src="/images/statistics-hero.jpg"
             alt="Statistics and data analysis background" 
             fill
             className="object-cover"

@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4 text-xs md:text-sm">
               {/* Date and location - hide on very small screens */}
               <div className="hidden sm:flex items-center space-x-3">
-                <span>📅 Friday, September 12, to Wednesday, September 17, 2025, 9AM - 12PM</span>
+                <span>📅 Friday, September 12, 9AM - 5PM</span>
                 <span>📍 Online</span>
               </div>
               
