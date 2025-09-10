@@ -57,8 +57,8 @@ const Navbar = () => {
                   asChild
                   className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10 px-2 md:px-3 py-0.5 text-xs md:text-sm font-bold"
                 >
-                  <Link href="/contact">
-                    Express Interest
+                  <Link href="https://meet.google.com/ezh-omzw-byz">
+                    Attend Online
                   </Link>
                 </Button>
               </div>
