@@ -5,6 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { typography } from '@/lib/styles';
 import { motion } from 'framer-motion';
+import { 
+  AcademicCapIcon, 
+  UserIcon, 
+  BuildingLibraryIcon, 
+  ChartBarIcon 
+} from '@heroicons/react/24/outline';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -24,170 +30,158 @@ const staggerContainer = {
 export default function About() {
   const teamMembers = [
     {
-      name: 'Abraham Muwanguzi',
-      role: 'Director',
-      image: '/images/abraham.jpg',
-      bio: 'Leading statistical research and training initiatives across East Africa'
+      name: "Dr. Fabian Nabugoomu",
+      title: "Chairman, Board of Directors",
+      image: "/images/fabian.jpg",
+      shortBio: "Associate Professor of Statistics and Applied Computing. Currently the Deputy Vice-Chancellor of Kyambogo University responsible for Finance and Administration.",
+      education: "PhD in Statistics (1994) from the University of Edinburgh, Scotland",
+      icon: <AcademicCapIcon className="h-6 w-6 text-easi-orange" />
     },
     {
-      name: 'Fabian Nabugoomu',
-      role: 'Senior Statistician',
-      image: '/images/fabian.jpg',
-      bio: 'Expert in statistical methodology and data analysis techniques'
+      name: "Prof. Ronald Wesonga",
+      title: "Founding Director",
+      image: "/images/ronald.jpg",
+      shortBio: "Statistician based at the Department of Statistics, Sultan Qaboos University. Formerly a visiting Professor at the Institute of Social Research, Makerere University.",
+      education: "Studied at the Institute of Statistics and Applied Economics, Makerere University",
+      icon: <UserIcon className="h-6 w-6 text-easi-orange" />
     },
     {
-      name: 'Ronald Kizito',
-      role: 'Training Coordinator',
-      image: '/images/ronald.jpg',
-      bio: 'Specialized in capacity building and professional development'
+      name: "Dr. Abraham Owino Yeyo",
+      title: "Director",
+      image: "/images/abraham.jpg",
+      shortBio: "Statistician involved in capacity building in Research, Monitoring and Evaluation and Community Development, currently lecturing at Makerere University.",
+      education: "Lecturer at Makerere University School of Statistics and Planning",
+      icon: <BuildingLibraryIcon className="h-6 w-6 text-easi-orange" />
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-b from-easi-orange to-easi-dark text-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-24">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/team-meeting.jpg"
+            alt="EASI team meeting" 
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="text-center"
+            className="text-center text-white"
           >
             <motion.h1 
               className={`${typography.h1} mb-8`}
               variants={fadeInUp}
             >
-              About EASI
+              About <span className="text-white">EASI</span>
             </motion.h1>
             <motion.p 
               className="text-xl mb-10 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              The East African Statistics Institute is dedicated to advancing statistical excellence 
-              and research capabilities across the East African region through comprehensive training 
-              and innovative research methodologies.
+              The East African Statistics Institute (EASI) was established to provide primarily a complementary role of research in appropriate statistical and computational methodology that facilitate production and sustenance of quality national statistics.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Mission and Vision Section */}
+      {/* Mission & Vision Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              variants={fadeInUp}
             >
-              <Image
-                src="/images/team-meeting.jpg"
-                alt="EASI team meeting"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
+              <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-easi-orange h-full">
+                <h2 className={`${typography.h3} mb-4 text-easi-dark`}>Our Mission</h2>
+                <p className="text-gray-600">
+                  To provide high-quality research in statistical methodology and computational techniques that enhance the production and sustainability of quality national statistics across East Africa.
+                </p>
+              </div>
             </motion.div>
             <motion.div
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              variants={staggerContainer}
             >
-              <motion.div variants={fadeInUp} className="mb-12">
-                <h2 className={`${typography.h2} mb-6 text-easi-orange`}>Our Mission</h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  To provide comprehensive research in statistical methodology and deliver 
-                  high-quality training programs that enhance the quality of national statistics 
-                  and build statistical capacity across East Africa.
+              <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-easi-orange h-full">
+                <h2 className={`${typography.h3} mb-4 text-easi-dark`}>Our Vision</h2>
+                <p className="text-gray-600">
+                  To be the leading center of excellence in statistical research, methodology development, and capacity building in East Africa and beyond.
                 </p>
-              </motion.div>
-              <motion.div variants={fadeInUp}>
-                <h2 className={`${typography.h2} mb-6 text-easi-orange`}>Our Vision</h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  To be the leading center of excellence for statistical research and training 
-                  in East Africa, fostering data-driven decision making and contributing to 
-                  sustainable development in the region.
-                </p>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* What We Do Section */}
+      {/* Team Section */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            variants={staggerContainer}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <motion.h2 
-              className={`${typography.h2} mb-6`}
-              variants={fadeInUp}
-            >
-              What We Do
-            </motion.h2>
-            <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
-              variants={fadeInUp}
-            >
-              EASI is committed to advancing statistical excellence through research, training, and consultancy services
-            </motion.p>
+            <h2 className={`${typography.h2} mb-4`}>Our Leadership Team</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our team consists of experienced statisticians and researchers dedicated to advancing statistical excellence across East Africa.
+            </p>
           </motion.div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Research Excellence',
-                description: 'Conducting cutting-edge research in statistical methodology and computational techniques to support evidence-based policy making.',
-                image: '/images/appreciation.jpg'
-              },
-              {
-                title: 'Capacity Building',
-                description: 'Delivering comprehensive training programs to build statistical capacity among professionals and institutions.',
-                image: '/images/training-session.jpg'
-              },
-              {
-                title: 'Consultancy Services',
-                description: 'Providing expert consultancy services in statistical analysis, survey design, and data management.',
-                image: '/images/consultancy.jpg'
-              }
-            ].map((service, index) => (
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-80 relative overflow-hidden rounded-lg hover:shadow-lg transition-shadow duration-300">
-                  {/* Background Image */}
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                  </div>
-                  
-                  {/* Content Overlay */}
-                  <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
-                    <h3 className={`${typography.h4} mb-4 text-white`}>
-                      {service.title}
-                    </h3>
-                    <p className="text-white/90">
-                      {service.description}
-                    </p>
-                  </div>
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-0 flex flex-col h-full">
+                    <div className="relative">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={400}
+                        height={300}
+                        className="w-full h-48 object-cover rounded-t-lg"
+                      />
+                      <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md">
+                        {member.icon}
+                      </div>
+                    </div>
+                    <div className="p-6 flex-grow">
+                      <h3 className={`${typography.h4} mb-1`}>{member.name}</h3>
+                      <p className="text-easi-orange font-medium mb-4">{member.title}</p>
+                      <p className="text-gray-600 mb-4">{member.shortBio}</p>
+                      <div className="flex items-center mb-4">
+                        <AcademicCapIcon className="h-5 w-5 text-gray-500 mr-2" />
+                        <p className="text-sm text-gray-500">{member.education}</p>
+                      </div>
+                      <Button 
+                        variant="outline"
+                        className="mt-2 bg-easi-orange/20 text-easi-orange border-easi-orange hover:bg-easi-orange/30"
+                      >
+                        Read More
+                      </Button>
+                    </div>
+                  </CardContent>
                 </Card>
               </motion.div>
             ))}
@@ -195,59 +189,60 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Values Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            variants={staggerContainer}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <motion.h2 
-              className={`${typography.h2} mb-6`}
-              variants={fadeInUp}
-            >
-              Our Leadership Team
-            </motion.h2>
-            <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
-              variants={fadeInUp}
-            >
-              Meet the experienced professionals leading EASI's mission to advance statistical excellence in East Africa
-            </motion.p>
+            <h2 className={`${typography.h2} mb-4`}>Our Core Values</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              These principles guide our work and relationships with partners and clients.
+            </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Excellence",
+                description: "We are committed to the highest standards of statistical methodology and research.",
+                icon: <AcademicCapIcon className="h-12 w-12 text-easi-orange" />
+              },
+              {
+                title: "Innovation",
+                description: "We continuously seek new approaches to solve complex statistical challenges.",
+                icon: <ChartBarIcon className="h-12 w-12 text-easi-orange" />
+              },
+              {
+                title: "Integrity",
+                description: "We uphold ethical standards and transparency in all our work and relationships.",
+                icon: <UserIcon className="h-12 w-12 text-easi-orange" />
+              },
+              {
+                title: "Collaboration",
+                description: "We believe in the power of partnerships to achieve greater impact across the region.",
+                icon: <BuildingLibraryIcon className="h-12 w-12 text-easi-orange" />
+              }
+            ].map((value, index) => (
               <motion.div
                 key={index}
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
               >
-                <Card className="h-80 relative overflow-hidden rounded-lg hover:shadow-lg transition-all duration-300">
-                  {/* Background Image */}
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                  </div>
-                  
-                  {/* Content Overlay */}
-                  <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white text-center">
-                    <h3 className={`${typography.h4} mb-2 text-white`}>{member.name}</h3>
-                    <p className="text-easi-orange font-medium mb-4">{member.role}</p>
-                    <p className="text-white/90 text-sm">{member.bio}</p>
-                  </div>
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-center mb-4">
+                      {value.icon}
+                    </div>
+                    <h3 className={`${typography.h4} mb-2 text-center`}>{value.title}</h3>
+                    <p className="text-gray-600 text-center">{value.description}</p>
+                  </CardContent>
                 </Card>
               </motion.div>
             ))}
@@ -269,14 +264,13 @@ export default function About() {
               className={`${typography.h2} mb-6`}
               variants={fadeInUp}
             >
-              Partner With Us
+              Join Us in Our Mission
             </motion.h2>
             <motion.p 
               className="text-xl mb-10 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              Join us in advancing statistical excellence and building capacity across East Africa. 
-              Let&apos;s work together to create a data-driven future for the region.
+              Partner with EASI to advance statistical excellence and contribute to evidence-based decision making across East Africa.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button
@@ -286,7 +280,7 @@ export default function About() {
                 className="bg-easi-orange/20 text-easi-orange border-easi-orange hover:bg-easi-orange/30 px-8 py-3 text-lg"
               >
                 <a href="/contact">
-                  Get in Touch
+                  Contact Us Today
                 </a>
               </Button>
             </motion.div>
