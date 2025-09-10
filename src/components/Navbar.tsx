@@ -33,7 +33,7 @@ const Navbar = () => {
               <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full border border-black">
                 🚀 Upcoming Event
               </span>
-              <span className="text-xs md:text-sm font-medium text-center sm:text-left">AI Workshop</span>
+              <span className="text-xs md:text-sm font-medium text-center sm:text-left">AI Training for Lecturers and Graduate Students</span>
             </div>
             
             {/* Right side - Date, location, and buttons */}
@@ -41,7 +41,7 @@ const Navbar = () => {
               {/* Date and location - hide on very small screens */}
               <div className="hidden sm:flex items-center space-x-3">
                 <span>📅 Friday, September 12, 9AM - 5PM</span>
-                <span>📍 Online</span>
+                <span>📍 University of Kisubi</span>
               </div>
               
               {/* Mobile: show only date */}
