@@ -99,7 +99,7 @@ const Navbar = () => {
             ))}
             <Button asChild variant="outline" className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10">
               <Link href="/contact">
-                Express Interest
+                Get in Touch
               </Link>
             </Button>
           </div>
