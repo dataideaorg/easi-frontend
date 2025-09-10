@@ -20,17 +20,17 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md">
       {/* Thin Top Banner */}
-      <section className="relative bg-gradient-to-r from-easi-orange to-easi-orange-light py-2 md:py-3">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-orange-200 py-2 md:py-3 ">
+        <div className="container mx-auto px-4 ">
           <motion.div 
-            className="flex flex-col md:flex-row items-center justify-between text-white"
+            className="flex flex-col md:flex-row items-center justify-between text-black"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             {/* Left side - Event info */}
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-2 md:mb-0">
-              <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full">
+              <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full border border-black">
                 🚀 Upcoming Event
               </span>
               <span className="text-xs md:text-sm font-medium text-center sm:text-left">AI Workshop</span>
