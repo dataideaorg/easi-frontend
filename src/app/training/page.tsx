@@ -34,8 +34,8 @@ export default function Training() {
       title: 'Statistical Methods and Data Analysis',
       duration: '5 days',
       participants: '25 max',
-      description: 'Comprehensive training in statistical methods, data collection, analysis, and interpretation.',
-      topics: ['Descriptive Statistics', 'Inferential Statistics', 'Regression Analysis', 'Data Visualization'],
+      description: 'Comprehensive training in statistical methods, data collection, analysis, and interpretation. Perfect for researchers, analysts, and professionals who need to understand and apply statistical concepts in their work.',
+      topics: ['Descriptive Statistics', 'Inferential Statistics', 'Regression Analysis', 'Data Visualization', 'Hypothesis Testing', 'Statistical Modeling'],
       level: 'Intermediate',
       image: '/images/training-session.jpg'
     },
@@ -43,8 +43,8 @@ export default function Training() {
       title: 'Survey Design and Implementation',
       duration: '3 days',
       participants: '20 max',
-      description: 'Learn to design, implement, and manage statistical surveys for data collection.',
-      topics: ['Survey Methodology', 'Sampling Techniques', 'Questionnaire Design', 'Data Quality'],
+      description: 'Learn to design, implement, and manage statistical surveys for data collection. This course covers everything from survey methodology to data quality assurance.',
+      topics: ['Survey Methodology', 'Sampling Techniques', 'Questionnaire Design', 'Data Quality', 'Response Analysis', 'Survey Management'],
       level: 'Advanced',
       image: '/images/team-meeting.jpg'
     },
@@ -52,10 +52,37 @@ export default function Training() {
       title: 'Statistical Software Training',
       duration: '4 days',
       participants: '30 max',
-      description: 'Hands-on training in statistical software packages including R, SPSS, and Stata.',
-      topics: ['R Programming', 'SPSS Analysis', 'Stata Operations', 'Data Management'],
+      description: 'Hands-on training in statistical software packages including R, SPSS, and Stata. Learn to use these powerful tools for data analysis and statistical computing.',
+      topics: ['R Programming', 'SPSS Analysis', 'Stata Operations', 'Data Management', 'Statistical Computing', 'Report Generation'],
       level: 'Beginner to Advanced',
       image: '/images/consultancy.jpg'
+    },
+    {
+      title: 'R Programming for Statistical Analysis',
+      duration: '3-5 days',
+      participants: '25 max',
+      description: 'Comprehensive training in R programming language for statistical analysis, data visualization, and reporting. From basics to advanced statistical modeling.',
+      topics: ['R Fundamentals', 'Data Manipulation', 'Statistical Tests', 'Data Visualization', 'Advanced Modeling', 'Report Generation'],
+      level: 'Beginner to Advanced',
+      image: '/images/training-session.jpg'
+    },
+    {
+      title: 'Python for Data Science',
+      duration: '4-5 days',
+      participants: '30 max',
+      description: 'Hands-on training in Python programming for data analysis, machine learning, and statistical applications. Perfect for data scientists and analysts.',
+      topics: ['Python Basics', 'Pandas & NumPy', 'Data Visualization', 'Machine Learning', 'Statistical Analysis', 'Data Management'],
+      level: 'Beginner to Intermediate',
+      image: '/images/consultancy.jpg'
+    },
+    {
+      title: 'Monitoring and Evaluation',
+      duration: '3-4 days',
+      participants: '20 max',
+      description: 'Comprehensive training in designing, implementing, and managing effective M&E systems for programs and projects.',
+      topics: ['M&E Fundamentals', 'Results-Based M&E', 'Data Collection Methods', 'Impact Assessment', 'M&E Tools', 'Reporting Systems'],
+      level: 'Beginner to Intermediate',
+      image: '/images/team-meeting.jpg'
     }
   ];
 
@@ -107,7 +134,7 @@ export default function Training() {
               <Button
                 size="lg"
                 asChild
-                className="bg-easi-orange hover:bg-easi-orange-hover px-8 py-3 text-lg"
+                className="bg-easi-orange/80 hover:bg-easi-orange-hover/80 px-8 py-3 text-lg"
               >
                 <Link href="/contact">
                   Enroll Now
@@ -115,6 +142,85 @@ export default function Training() {
               </Button>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.h2 
+              className={`${typography.h2} mb-6`}
+              variants={fadeInUp}
+            >
+              Upcoming Training Events
+            </motion.h2>
+            <motion.p 
+              className="text-gray-600 max-w-2xl mx-auto"
+              variants={fadeInUp}
+            >
+              Explore our upcoming events and secure your spot today.
+            </motion.p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'AI Training for Lecturers and Graduate Students',
+                date: 'Friday, September 12, 9AM - 5PM',
+                location: 'University of Kisubi',
+                description: 'A hands-on training for lecturers and graduate students to learn about AI and its applications in their research and teaching.'
+              },
+              {
+                title: 'Python for Data Science Bootcamp',
+                date: 'To Be Determined',
+                location: 'Online',
+                description: 'An intensive bootcamp covering Python basics, pandas, and machine learning for aspiring data scientists.'
+              },
+              {
+                title: 'Machine Learning with Python',
+                date: 'To Be Determined',
+                location: 'Online',
+                description: 'An intensive training covering machine learning algorithms and their applications, with a focus on practical implementation.'
+              }
+            ].map((training, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-easi-orange">{training.title}</h3>
+                    <div className="text-gray-700 mb-1">
+                      <strong className="text-gray-900">Date:</strong> {training.date}
+                    </div>
+                    <div className="text-gray-700 mb-1">
+                      <strong className="text-gray-900">Location:</strong> {training.location}
+                    </div>
+                    <p className="text-gray-600 mt-2 mb-4">{training.description}</p>
+                    <Button
+                      asChild
+                      className="w-full bg-easi-orange/80 hover:bg-easi-orange-hover/80"
+                    >
+                      <Link href="/contact">
+                        Express Interest
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -142,7 +248,7 @@ export default function Training() {
             </motion.p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trainingPrograms.map((program, index) => (
               <motion.div
                 key={index}
@@ -197,7 +303,7 @@ export default function Training() {
                     
                     <Button
                       asChild
-                      className="w-full bg-easi-orange hover:bg-easi-orange-hover"
+                      className="w-full bg-easi-orange/80 hover:bg-easi-orange-hover/80"
                     >
                       <Link href="/contact">
                         Learn More
@@ -239,7 +345,7 @@ export default function Training() {
                 <Button
                   size="lg"
                   asChild
-                  className="bg-easi-orange hover:bg-easi-orange-hover"
+                  className="bg-easi-orange/80 hover:bg-easi-orange-hover/80"
                 >
                   <Link href="/contact">
                     Register Today
@@ -262,6 +368,71 @@ export default function Training() {
                 className="rounded-lg shadow-lg"
               />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.h2 
+              className={`${typography.h2} mb-6`}
+              variants={fadeInUp}
+            >
+              What Our Trainees Say
+            </motion.h2>
+            <motion.p 
+              className="text-gray-600 max-w-2xl mx-auto"
+              variants={fadeInUp}
+            >
+              Hear from professionals who have participated in our training programs
+            </motion.p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "The R programming training was excellent. The instructors were knowledgeable and the hands-on exercises helped me apply what I learned immediately in my work.",
+                author: "John Mukasa",
+                organization: "Uganda Bureau of Statistics"
+              },
+              {
+                quote: "EASI's M&E training transformed how our organization approaches program evaluation. The practical tools and frameworks have been invaluable.",
+                author: "Sarah Nyambura",
+                organization: "Kenya National Bureau of Statistics"
+              },
+              {
+                quote: "The Python for Data Science course was comprehensive and well-structured. I now feel confident analyzing large datasets and creating insightful visualizations.",
+                author: "Emmanuel Rwema",
+                organization: "Rwanda National Institute of Statistics"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-gray-50 border border-gray-100">
+                  <CardContent className="p-6">
+                    <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
+                    <div>
+                      <p className="font-semibold text-easi-orange">{testimonial.author}</p>
+                      <p className="text-sm text-gray-500">{testimonial.organization}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -316,7 +487,7 @@ export default function Training() {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white text-white hover:bg-white hover:text-easi-dark px-8 py-3 text-lg"
+                className="border-white text-white hover:bg-white hover:text-easi-dark px-8 py-3 text-lg bg-white/10"
               >
                 <Link href="/contact">
                   Request Custom Training
