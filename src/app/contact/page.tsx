@@ -104,7 +104,7 @@ export default function Contact() {
           organization: '',
           inquiryType: ''
         });
-      } catch (error) {
+      } catch {
         setSubmitStatus({
           show: true,
           message: 'There was an error sending your message. Please try again later.',
@@ -251,7 +251,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form and Map Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-easi-dark text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -261,13 +261,13 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="shadow-lg">
+              <Card className="shadow-lg bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-8">
-                  <h2 className={`${typography.h3} mb-6`}>Send Us a Message</h2>
+                  <h2 className={`${typography.h3} mb-6 text-white`}>Send Us a Message</h2>
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                           Your Name *
                         </label>
                         <input
@@ -284,7 +284,7 @@ export default function Contact() {
                         {errors.name && <p className="text-red-500 text-sm mt-1">Name is required</p>}
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                           Your Email *
                         </label>
                         <input
@@ -304,7 +304,7 @@ export default function Contact() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                           Phone Number
                         </label>
                         <input
@@ -317,7 +317,7 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="organization" className="block text-sm font-medium text-gray-300 mb-2">
                           Organization
                         </label>
                         <input
@@ -332,7 +332,7 @@ export default function Contact() {
                     </div>
                     
                     <div className="mb-4">
-                      <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-300 mb-2">
                         Inquiry Type
                       </label>
                       <select
@@ -352,7 +352,7 @@ export default function Contact() {
                     </div>
                     
                     <div className="mb-4">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                         Subject
                       </label>
                       <input
@@ -366,7 +366,7 @@ export default function Contact() {
                     </div>
                     
                     <div className="mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Your Message *
                       </label>
                       <textarea
@@ -386,7 +386,7 @@ export default function Contact() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full bg-easi-orange/80 hover:bg-easi-orange/90"
+                      className="w-full bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                       disabled={loading}
                     >
                       {loading ? 'Sending...' : 'Send Message'}
@@ -403,7 +403,7 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="shadow-lg h-full">
+              <Card className="shadow-lg h-full bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-0 h-full">
                   <div className="h-full min-h-[400px] w-full">
                     <iframe 
@@ -433,7 +433,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className={`${typography.h2} mb-4`}>Frequently Asked Questions</h2>
+            <h2 className={`${typography.h2} mb-4 text-easi-orange`}>Frequently Asked Questions</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Find answers to common questions about our services and programs
             </p>
