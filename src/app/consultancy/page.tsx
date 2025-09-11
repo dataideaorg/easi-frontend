@@ -120,7 +120,7 @@ export default function Consultancy() {
               <Button
                 size="lg"
                 asChild
-                className="bg-easi-orange hover:bg-easi-orange-hover px-8 py-3 text-lg"
+                className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover px-8 py-3 text-lg"
               >
                 <Link href="/contact">
                   Request Consultation
@@ -142,7 +142,7 @@ export default function Consultancy() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-easi-orange`}
               variants={fadeInUp}
             >
               Our Consulting Services
@@ -196,7 +196,7 @@ export default function Consultancy() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-easi-dark text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -206,13 +206,13 @@ export default function Consultancy() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-white`}
               variants={fadeInUp}
             >
               Our Process
             </motion.h2>
             <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
+              className="text-gray-300 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
               We follow a structured approach to ensure successful delivery of our consulting services.
@@ -238,8 +238,8 @@ export default function Consultancy() {
                 <div className="w-24 h-24 bg-easi-orange rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
-                <h3 className={`${typography.h4} mb-4`}>{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <h3 className={`${typography.h4} mb-4 text-white`}>{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -247,7 +247,7 @@ export default function Consultancy() {
       </section>
 
       {/* Sectors Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-easi-dark text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -271,7 +271,7 @@ export default function Consultancy() {
               variants={staggerContainer}
             >
               <motion.h2 
-                className={`${typography.h2} mb-8 text-easi-orange`}
+                className={`${typography.h2} mb-8 text-white`}
                 variants={fadeInUp}
               >
                 Sectors We Serve
@@ -289,7 +289,7 @@ export default function Consultancy() {
                 ].map((sector, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircleIcon className="h-5 w-5 text-easi-orange flex-shrink-0" />
-                    <span className="text-gray-700">{sector}</span>
+                    <span className="text-gray-300">{sector}</span>
                   </div>
                 ))}
               </motion.div>
@@ -299,7 +299,7 @@ export default function Consultancy() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-easi-dark text-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -309,13 +309,13 @@ export default function Consultancy() {
             className="text-center"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-easi-orange`}
               variants={fadeInUp}
             >
               Ready to Start Your Project?
             </motion.h2>
             <motion.p 
-              className="text-xl mb-10 max-w-2xl mx-auto text-gray-300"
+              className="text-xl mb-10 max-w-2xl mx-auto text-gray-600"
               variants={fadeInUp}
             >
               Let's discuss how our statistical consulting services can help your organization 
@@ -328,7 +328,7 @@ export default function Consultancy() {
               <Button
                 size="lg"
                 asChild
-                className="bg-easi-orange hover:bg-easi-orange-hover px-8 py-3 text-lg"
+                className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover px-8 py-3 text-lg"
               >
                 <Link href="/contact">
                   Get Started
@@ -338,7 +338,7 @@ export default function Consultancy() {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white text-white hover:bg-white hover:text-easi-dark px-8 py-3 text-lg"
+                className="border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/20 hover:border-easi-orange-hover px-8 py-3 text-lg bg-easi-orange/10"
               >
                 <Link href="/about">
                   Learn More About Us

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { typography } from '@/lib/styles';
@@ -122,13 +123,24 @@ export default function Resources() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-b from-easi-orange to-easi-dark text-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-24">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/statistics-hero.jpg"
+            alt="Statistical resources and research" 
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="text-center"
+            className="text-center text-white"
           >
             <motion.h1 
               className={`${typography.h1} mb-8`}
@@ -143,12 +155,23 @@ export default function Resources() {
               Access our comprehensive collection of statistical resources, research papers, 
               training materials, and educational content to support your statistical journey.
             </motion.p>
+            <motion.div variants={fadeInUp}>
+              <Button
+                size="lg"
+                asChild
+                className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover px-8 py-3 text-lg"
+              >
+                <Link href="#resource-categories">
+                  Explore Resources
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Resource Categories */}
-      <section className="py-24 bg-white">
+      <section id="resource-categories" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -158,7 +181,7 @@ export default function Resources() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-easi-orange`}
               variants={fadeInUp}
             >
               Resource Categories
@@ -193,7 +216,7 @@ export default function Resources() {
                     <Button
                       asChild
                       variant="outline"
-                      className="border-easi-orange text-easi-orange hover:bg-easi-orange hover:text-white"
+                      className="border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/20 hover:border-easi-orange-hover bg-easi-orange/10"
                     >
                       <Link href={category.link}>
                         Explore
@@ -208,7 +231,7 @@ export default function Resources() {
       </section>
 
       {/* Featured Resources */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-easi-dark text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -218,13 +241,13 @@ export default function Resources() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-white`}
               variants={fadeInUp}
             >
               Featured Resources
             </motion.h2>
             <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
+              className="text-gray-300 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
               Discover our most popular and recently published resources.
@@ -241,21 +264,21 @@ export default function Resources() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-white/10 backdrop-blur-sm border-white/20">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-easi-orange text-white text-xs rounded-full">
                         {resource.type}
                       </span>
-                      <span className="text-sm text-gray-500">{resource.date}</span>
+                      <span className="text-sm text-gray-300">{resource.date}</span>
                     </div>
                     <h3 className={`${typography.h4} mb-3 text-easi-orange`}>
                       {resource.title}
                     </h3>
-                    <p className="text-gray-600 mb-6">{resource.description}</p>
+                    <p className="text-gray-300 mb-6">{resource.description}</p>
                     <Button
                       asChild
-                      className="bg-easi-orange hover:bg-easi-orange-hover"
+                      className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                     >
                       {resource.downloadLink.startsWith('http') ? (
                         <a href={resource.downloadLink} target="_blank" rel="noopener noreferrer">
@@ -288,7 +311,7 @@ export default function Resources() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-easi-orange`}
               variants={fadeInUp}
             >
               Useful External Links
@@ -325,7 +348,7 @@ export default function Resources() {
                     <Button
                       asChild
                       variant="outline"
-                      className="border-easi-orange text-easi-orange hover:bg-easi-orange hover:text-white"
+                      className="border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/20 hover:border-easi-orange-hover bg-easi-orange/10"
                     >
                       <a href={link.url} target="_blank" rel="noopener noreferrer">
                         <ArrowTopRightOnSquareIcon className="h-4 w-4 mr-2" />
@@ -374,7 +397,7 @@ export default function Resources() {
                   className="flex-1 px-4 py-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-easi-orange"
                 />
                 <Button
-                  className="bg-easi-orange hover:bg-easi-orange-hover px-6"
+                  className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover px-6"
                 >
                   Subscribe
                 </Button>

@@ -134,7 +134,7 @@ export default function Training() {
               <Button
                 size="lg"
                 asChild
-                className="bg-easi-orange/80 hover:bg-easi-orange-hover/80 px-8 py-3 text-lg"
+                className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover px-8 py-3 text-lg"
               >
                 <Link href="/contact">
                   Enroll Now
@@ -146,7 +146,7 @@ export default function Training() {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -210,7 +210,7 @@ export default function Training() {
                     <p className="text-gray-600 mt-2 mb-4">{training.description}</p>
                     <Button
                       asChild
-                      className="w-full bg-easi-orange/80 hover:bg-easi-orange-hover/80"
+                      className="w-full bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                     >
                       <Link href="/contact">
                         Express Interest
@@ -225,7 +225,7 @@ export default function Training() {
       </section>
 
       {/* Training Programs */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-easi-dark text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -235,13 +235,13 @@ export default function Training() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-white`}
               variants={fadeInUp}
             >
               Our Training Programs
             </motion.h2>
             <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
+              className="text-gray-300 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
               Choose from our range of specialized training programs designed to meet different skill levels and professional needs.
@@ -258,7 +258,7 @@ export default function Training() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-white/10 backdrop-blur-sm border-white/20">
                   <div className="h-48 relative">
                     <Image
                       src={program.image}
@@ -274,11 +274,11 @@ export default function Training() {
                     <h3 className={`${typography.h4} mb-4 text-easi-orange`}>
                       {program.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-300 mb-4">
                       {program.description}
                     </p>
                     
-                    <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
                         <ClockIcon className="h-4 w-4" />
                         {program.duration}
@@ -290,8 +290,8 @@ export default function Training() {
                     </div>
                     
                     <div className="mb-6">
-                      <h4 className="font-semibold mb-2">Key Topics:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <h4 className="font-semibold mb-2 text-white">Key Topics:</h4>
+                      <ul className="text-sm text-gray-300 space-y-1">
                         {program.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className="flex items-center gap-2">
                             <CheckCircleIcon className="h-4 w-4 text-easi-orange flex-shrink-0" />
@@ -303,7 +303,7 @@ export default function Training() {
                     
                     <Button
                       asChild
-                      className="w-full bg-easi-orange/80 hover:bg-easi-orange-hover/80"
+                      className="w-full bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                     >
                       <Link href="/contact">
                         Learn More
@@ -345,7 +345,7 @@ export default function Training() {
                 <Button
                   size="lg"
                   asChild
-                  className="bg-easi-orange/80 hover:bg-easi-orange-hover/80"
+                  className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                 >
                   <Link href="/contact">
                     Register Today
@@ -373,7 +373,7 @@ export default function Training() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-easi-dark text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -383,13 +383,13 @@ export default function Training() {
             className="text-center mb-16"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-white`}
               variants={fadeInUp}
             >
               What Our Trainees Say
             </motion.h2>
             <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
+              className="text-gray-300 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
               Hear from professionals who have participated in our training programs
@@ -422,12 +422,12 @@ export default function Training() {
                 variants={fadeInUp}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full bg-gray-50 border border-gray-100">
+                <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20">
                   <CardContent className="p-6">
-                    <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
+                    <p className="text-gray-300 italic mb-6">"{testimonial.quote}"</p>
                     <div>
                       <p className="font-semibold text-easi-orange">{testimonial.author}</p>
-                      <p className="text-sm text-gray-500">{testimonial.organization}</p>
+                      <p className="text-sm text-gray-400">{testimonial.organization}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -438,7 +438,7 @@ export default function Training() {
       </section>
 
       {/* Custom Training Section */}
-      <section className="py-24 bg-easi-dark text-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -448,13 +448,13 @@ export default function Training() {
             className="text-center"
           >
             <motion.h2 
-              className={`${typography.h2} mb-6`}
+              className={`${typography.h2} mb-6 text-easi-orange`}
               variants={fadeInUp}
             >
               Custom Training Solutions
             </motion.h2>
             <motion.p 
-              className="text-xl mb-8 max-w-3xl mx-auto text-gray-300"
+              className="text-xl mb-8 max-w-3xl mx-auto text-gray-600"
               variants={fadeInUp}
             >
               Need specialized training for your organization? We offer customized training programs 
@@ -466,19 +466,19 @@ export default function Training() {
               className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
             >
               <div className="text-center">
-                <AcademicCapIcon className="h-12 w-12 text-easi-orange-light mx-auto mb-4" />
-                <h3 className={`${typography.h4} mb-2`}>Tailored Content</h3>
-                <p className="text-gray-300">Customized curriculum based on your organization's needs</p>
+                <AcademicCapIcon className="h-12 w-12 text-easi-orange mx-auto mb-4" />
+                <h3 className={`${typography.h4} mb-2 text-gray-800`}>Tailored Content</h3>
+                <p className="text-gray-600">Customized curriculum based on your organization's needs</p>
               </div>
               <div className="text-center">
-                <UserGroupIcon className="h-12 w-12 text-easi-orange-light mx-auto mb-4" />
-                <h3 className={`${typography.h4} mb-2`}>On-site Delivery</h3>
-                <p className="text-gray-300">Training delivered at your premises for convenience</p>
+                <UserGroupIcon className="h-12 w-12 text-easi-orange mx-auto mb-4" />
+                <h3 className={`${typography.h4} mb-2 text-gray-800`}>On-site Delivery</h3>
+                <p className="text-gray-600">Training delivered at your premises for convenience</p>
               </div>
               <div className="text-center">
-                <ClockIcon className="h-12 w-12 text-easi-orange-light mx-auto mb-4" />
-                <h3 className={`${typography.h4} mb-2`}>Flexible Schedule</h3>
-                <p className="text-gray-300">Training scheduled to fit your organization's timeline</p>
+                <ClockIcon className="h-12 w-12 text-easi-orange mx-auto mb-4" />
+                <h3 className={`${typography.h4} mb-2 text-gray-800`}>Flexible Schedule</h3>
+                <p className="text-gray-600">Training scheduled to fit your organization's timeline</p>
               </div>
             </motion.div>
             
@@ -487,7 +487,7 @@ export default function Training() {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white text-white hover:bg-white hover:text-easi-dark px-8 py-3 text-lg bg-white/10"
+                className="border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/20 hover:border-easi-orange-hover px-8 py-3 text-lg bg-easi-orange/10"
               >
                 <Link href="/contact">
                   Request Custom Training
