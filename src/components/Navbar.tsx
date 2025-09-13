@@ -66,9 +66,9 @@ const Navbar = () => {
                   asChild
                   className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10 px-2 md:px-3 py-0.5 text-xs md:text-sm font-bold"
                 >
-                  {/* <Link href="https://meet.google.com/ezh-omzw-byz">
+                  <Link href="https://meet.google.com/ezh-omzw-byz">
                     Attend Online
-                  </Link> */}
+                  </Link>
                 </Button>
               </div>
             </div>
