@@ -40,7 +40,7 @@ const Navbar = () => {
             {/* Left side - Event info */}
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-2 md:mb-0">
               <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full border border-black">
-                🚀 Upcoming Event
+                🚀 Previous Event
               </span>
               <span className="text-xs md:text-sm font-medium text-center sm:text-left">AI Training for Lecturers and Graduate Students</span>
             </div>
