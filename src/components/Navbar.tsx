@@ -5,16 +5,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { navigation } from '@/lib/navigation';
-import { motion } from 'framer-motion';
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { navigation, NavigationItem, NavigationSubItem } from '@/lib/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   const isActive = (path: string) => {
     return pathname === path;
+  };
+
+  const isDropdownActive = (items: NavigationSubItem[]) => {
+    return items.some(item => isActive(item.href));
+  };
+
+  const hasDropdown = (item: NavigationItem): item is NavigationItem & { hasDropdown: true } => {
+    return 'hasDropdown' in item && item.hasDropdown === true;
   };
 
   return (
@@ -83,19 +92,67 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                target={item.external ? '_blank' : undefined}
-                rel={item.external ? 'noopener noreferrer' : undefined}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? 'text-easi-orange bg-orange-50'
-                    : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
-                }`}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {hasDropdown(item) ? (
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <button
+                      className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                        isDropdownActive(item.items)
+                          ? 'text-easi-orange bg-orange-50'
+                          : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
+                      }`}
+                    >
+                      {item.name}
+                      <ChevronDownIcon className="w-4 h-4" />
+                    </button>
+                    
+                    <AnimatePresence>
+                      {activeDropdown === item.name && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"
+                        >
+                          {item.items.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              target={subItem.external ? '_blank' : undefined}
+                              rel={subItem.external ? 'noopener noreferrer' : undefined}
+                              className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                                isActive(subItem.href)
+                                  ? 'text-easi-orange bg-orange-50'
+                                  : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
+                              }`}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noopener noreferrer' : undefined}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                      isActive(item.href)
+                        ? 'text-easi-orange bg-orange-50'
+                        : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
             <Button asChild variant="outline" className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10">
               <Link href="/contact">
@@ -124,20 +181,74 @@ const Navbar = () => {
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-2">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  target={item.external ? '_blank' : undefined}
-                  rel={item.external ? 'noopener noreferrer' : undefined}
-                  onClick={() => setIsOpen(false)}
-                  className={`px-3 py-2 rounded-md text-base font-medium ${
-                    isActive(item.href)
-                      ? 'text-easi-orange bg-orange-50'
-                      : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {hasDropdown(item) ? (
+                    <div>
+                      <button
+                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                        className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium ${
+                          isDropdownActive(item.items)
+                            ? 'text-easi-orange bg-orange-50'
+                            : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
+                        }`}
+                      >
+                        {item.name}
+                        <ChevronDownIcon 
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-4 space-y-1 mt-2">
+                              {item.items.map((subItem) => (
+                                <Link
+                                  key={subItem.name}
+                                  href={subItem.href}
+                                  target={subItem.external ? '_blank' : undefined}
+                                  rel={subItem.external ? 'noopener noreferrer' : undefined}
+                                  onClick={() => {
+                                    setIsOpen(false);
+                                    setActiveDropdown(null);
+                                  }}
+                                  className={`block px-3 py-2 rounded-md text-sm font-medium ${
+                                    isActive(subItem.href)
+                                      ? 'text-easi-orange bg-orange-50'
+                                      : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
+                                  }`}
+                                >
+                                  {subItem.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      target={item.external ? '_blank' : undefined}
+                      rel={item.external ? 'noopener noreferrer' : undefined}
+                      onClick={() => setIsOpen(false)}
+                      className={`px-3 py-2 rounded-md text-base font-medium ${
+                        isActive(item.href)
+                          ? 'text-easi-orange bg-orange-50'
+                          : 'text-easi-dark hover:text-easi-orange hover:bg-orange-50'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <Button
                 asChild
