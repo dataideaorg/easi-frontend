@@ -32,7 +32,7 @@ export default function About() {
     {
       name: "Dr. Fabian Nabugoomu",
       title: "Chairman, Board of Directors",
-      image: "/images/fabian.jpg",
+      image: "/images/team/fabian.jpg",
       shortBio: "Associate Professor of Statistics and Applied Computing. Currently the Deputy Vice-Chancellor of Kyambogo University responsible for Finance and Administration.",
       education: "PhD in Statistics (1994) from the University of Edinburgh, Scotland",
       icon: <AcademicCapIcon className="h-6 w-6 text-easi-orange" />
@@ -40,7 +40,7 @@ export default function About() {
     {
       name: "Prof. Ronald Wesonga",
       title: "Founding Director",
-      image: "/images/ronald.jpg",
+      image: "/images/team/ronald.jpg",
       shortBio: "Statistician based at the Department of Statistics, Sultan Qaboos University. Formerly a visiting Professor at the Institute of Social Research, Makerere University.",
       education: "Studied at the Institute of Statistics and Applied Economics, Makerere University",
       icon: <UserIcon className="h-6 w-6 text-easi-orange" />
@@ -48,10 +48,26 @@ export default function About() {
     {
       name: "Dr. Abraham Owino Yeyo",
       title: "Director",
-      image: "/images/abraham.jpg",
+      image: "/images/team/abraham.jpg",
       shortBio: "Statistician involved in capacity building in Research, Monitoring and Evaluation and Community Development, currently lecturing at Makerere University.",
       education: "Lecturer at Makerere University School of Statistics and Planning",
       icon: <BuildingLibraryIcon className="h-6 w-6 text-easi-orange" />
+    },
+    {
+      name: "Francis Fuller Bbosa",
+      title: "Program Coordinator & Instructor",
+      image: "https://via.placeholder.com/400x300/dd8604/ffffff?text=Francis+Fuller+Bbosa",
+      shortBio: "Experienced program coordinator and instructor with expertise in statistical training programs and capacity building initiatives across East Africa.",
+      education: "Specialized in Program Coordination and Statistical Training",
+      icon: <ChartBarIcon className="h-6 w-6 text-easi-orange" />
+    },
+    {
+      name: "Juma Shafara",
+      title: "Systems Administrator",
+      image: "https://via.placeholder.com/400x300/dd8604/ffffff?text=Juma+Shafara",
+      shortBio: "Dedicated systems administrator with extensive experience in managing IT infrastructure and supporting statistical computing environments.",
+      education: "Expertise in Systems Administration and IT Support",
+      icon: <UserIcon className="h-6 w-6 text-easi-orange" />
     }
   ];
 
@@ -152,16 +168,24 @@ export default function About() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                   <CardContent className="p-0 flex flex-col h-full">
-                    <div className="relative">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={400}
-                        height={300}
-                        className="w-full h-48 object-cover rounded-t-lg"
-                      />
+                    <div className="relative -mt-6 -mx-6">
+                      {member.name === "Francis Fuller Bbosa" || member.name === "Juma Shafara" ? (
+                        <div className="w-full h-48 bg-easi-orange flex items-center justify-center">
+                          <span className="text-white font-semibold text-lg text-center px-4">
+                            {member.name}
+                          </span>
+                        </div>
+                      ) : (
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          width={400}
+                          height={300}
+                          className="w-full h-48 object-cover"
+                        />
+                      )}
                       <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md">
                         {member.icon}
                       </div>
