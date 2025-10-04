@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md">
       {/* Thin Top Banner */}
-      <section className="relative bg-orange-200 py-2 md:py-3 ">
+      <section className="relative bg-orange-200 py-2 md:py-3">
         <div className="container mx-auto px-4 ">
           <motion.div 
             className="flex flex-col md:flex-row items-center justify-between text-black"
@@ -66,7 +66,8 @@ const Navbar = () => {
                   asChild
                   className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10 px-2 md:px-3 py-0.5 text-xs md:text-sm font-bold"
                 >
-                  <Link href="https://meet.google.com/ezh-omzw-byz">
+                  <Link href="https://meet.google.com/ezh-omzw-byz" 
+                  className='pointer-events-none'>
                     Attend Online
                   </Link>
                 </Button>
