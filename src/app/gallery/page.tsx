@@ -125,7 +125,7 @@ export default function Gallery() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10 h-full flex items-end justify-center pb-16">
