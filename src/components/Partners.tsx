@@ -77,7 +77,7 @@ const Partners: React.FC = () => {
             Interested in partnering with us? We&apos;re always looking for new collaborations.
           </p>
           <motion.a
-            href="/contact"
+            href="/contact/"
             className="inline-block bg-easi-orange/20 text-easi-orange border border-easi-orange hover:bg-easi-orange/30 px-8 py-3 rounded-md font-medium transition-colors duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

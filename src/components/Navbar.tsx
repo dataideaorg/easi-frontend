@@ -156,7 +156,7 @@ const Navbar = () => {
               </div>
             ))}
             <Button asChild variant="outline" className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10">
-              <Link href="/contact">
+              <Link href="/contact/">
                 Get in Touch
               </Link>
             </Button>
@@ -257,7 +257,7 @@ const Navbar = () => {
                 className="mt-4 bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10"
                 onClick={() => setIsOpen(false)}
               >
-                <Link href="/contact">
+                <Link href="/contact/">
                   Get in Touch
                 </Link>
               </Button>

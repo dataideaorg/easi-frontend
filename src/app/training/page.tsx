@@ -136,7 +136,7 @@ export default function Training() {
                 asChild
                 className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover px-8 py-3 text-lg"
               >
-                <Link href="/contact">
+                <Link href="/contact/">
                   Enroll Now
                 </Link>
               </Button>
@@ -212,7 +212,7 @@ export default function Training() {
                       asChild
                       className="w-full bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                     >
-                      <Link href="/contact">
+                      <Link href="/contact/">
                         Express Interest
                       </Link>
                     </Button>
@@ -305,7 +305,7 @@ export default function Training() {
                       asChild
                       className="w-full bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                     >
-                      <Link href="/contact">
+                      <Link href="/contact/">
                         Learn More
                       </Link>
                     </Button>
@@ -347,7 +347,7 @@ export default function Training() {
                   asChild
                   className="bg-easi-orange/20 border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/30 hover:border-easi-orange-hover"
                 >
-                  <Link href="/contact">
+                  <Link href="/contact/">
                     Register Today
                   </Link>
                 </Button>
@@ -489,7 +489,7 @@ export default function Training() {
                 asChild
                 className="border-2 border-easi-orange text-easi-orange hover:bg-easi-orange/20 hover:border-easi-orange-hover px-8 py-3 text-lg bg-easi-orange/10"
               >
-                <Link href="/contact">
+                <Link href="/contact/">
                   Request Custom Training
                 </Link>
               </Button>

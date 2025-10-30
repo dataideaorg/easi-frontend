@@ -259,7 +259,7 @@ export default function Gallery() {
                 View Training Programs
               </motion.a>
               <motion.a
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium rounded-md border-2 border-white text-white hover:bg-white/10 hover:border-gray-200 transition-all duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

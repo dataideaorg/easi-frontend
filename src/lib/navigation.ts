@@ -48,5 +48,5 @@ export const navigation: NavigationItem[] = [
       { name: 'Others', href: '/resources', external: false },
     ]
   },
-  { name: 'Contact', href: '/contact', external: false },
+  { name: 'Contact', href: '/contact/', external: false },
 ];

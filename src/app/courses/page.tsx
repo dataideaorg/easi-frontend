@@ -202,7 +202,7 @@ export default function Courses() {
                 variant="outline"
                 className="bg-easi-orange/20 text-easi-orange border-easi-orange hover:bg-easi-orange/30 px-8 py-3 text-lg"
               >
-                <Link href="/contact">
+                <Link href="/contact/">
                   Enroll Today
                 </Link>
               </Button>

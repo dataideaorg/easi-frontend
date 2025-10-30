@@ -105,7 +105,7 @@ const Footer = () => {
                 Terms & Conditions
               </Link>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
               >
                 Privacy Policy

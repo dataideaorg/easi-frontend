@@ -303,7 +303,7 @@ export default function About() {
                 variant="outline"
                 className="bg-easi-orange/20 text-easi-orange border-easi-orange hover:bg-easi-orange/30 px-8 py-3 text-lg"
               >
-                <a href="/contact">
+                <a href="/contact/">
                   Contact Us Today
                 </a>
               </Button>
