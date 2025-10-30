@@ -40,22 +40,22 @@ const Navbar = () => {
             {/* Left side - Event info */}
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-2 md:mb-0">
               <span className="text-xs md:text-sm font-semibold bg-white/20 px-2 md:px-3 py-1 rounded-full border border-black">
-                🚀 Previous Event
+                🚀 Upcoming Event
               </span>
-              <span className="text-xs md:text-sm font-medium text-center sm:text-left">AI Training for Lecturers and Graduate Students</span>
+              <span className="text-xs md:text-sm font-medium text-center sm:text-left">Skilling Africa for the AI Era</span>
             </div>
             
             {/* Right side - Date, location, and buttons */}
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4 text-xs md:text-sm">
               {/* Date and location - hide on very small screens */}
               <div className="hidden sm:flex items-center space-x-3">
-                <span>📅 Friday, September 12, 9AM - 5PM</span>
-                <span>📍 University of Kisubi</span>
+                <span>📅 Friday, October 31, 15 UTC (6PM EAT)</span>
+                <span></span>
               </div>
               
               {/* Mobile: show only date */}
               <div className="sm:hidden">
-                <span>📅 Sep 12-17, 2025 9AM - 12PM</span>
+                <span>📅 Friday, October 31, 15 UTC (6PM EAT)</span>
               </div>
               
               {/* Buttons */}
@@ -66,9 +66,9 @@ const Navbar = () => {
                   asChild
                   className="bg-white/20 text-easi-orange border-easi-orange hover:bg-easi-orange/10 px-2 md:px-3 py-0.5 text-xs md:text-sm font-bold"
                 >
-                  <Link href="https://meet.google.com/ezh-omzw-byz" 
-                  className='pointer-events-none'>
-                    Attend Online
+                  <Link href="https://us06web.zoom.us/webinar/register/WN_SSpvvC-IT--m5DxpLsZqOg"
+                  className=''>
+                    Register Online
                   </Link>
                 </Button>
               </div>
