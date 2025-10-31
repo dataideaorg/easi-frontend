@@ -417,7 +417,7 @@ export default function Courses() {
                 asChild
                 className="bg-white/20 text-white border-white hover:bg-white/30 px-8 py-3 text-lg"
               >
-                <Link href="/training">
+                <Link href="/training/">
                   View Training Programs
                 </Link>
               </Button>

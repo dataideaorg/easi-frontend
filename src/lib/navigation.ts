@@ -25,16 +25,16 @@ export type NavigationItem = NavigationItemWithDropdown | NavigationItemWithoutD
 // Navigation configuration
 export const navigation: NavigationItem[] = [
   { name: 'Home', href: '/', external: false },
-  { name: 'About', href: '/about', external: false },
+  { name: 'About', href: '/about/', external: false },
   { 
     name: 'Services', 
     href: '#', 
     external: false,
     hasDropdown: true,
     items: [
-      { name: 'Courses', href: '/courses', external: false },
-      { name: 'Training', href: '/training', external: false },
-      { name: 'Consultancy', href: '/consultancy', external: false },
+      { name: 'Courses', href: '/courses/', external: false },
+      { name: 'Training', href: '/training/', external: false },
+      { name: 'Consultancy', href: '/consultancy/', external: false },
     ]
   },
   { name: 'Gallery', href: '/gallery', external: false },
@@ -45,7 +45,7 @@ export const navigation: NavigationItem[] = [
     hasDropdown: true,
     items: [
       { name: 'Blog', href: 'https://blog.easi.ac.ug/', external: true },
-      { name: 'Others', href: '/resources', external: false },
+      { name: 'Others', href: '/resources/', external: false },
     ]
   },
   { name: 'Contact', href: '/contact/', external: false },
